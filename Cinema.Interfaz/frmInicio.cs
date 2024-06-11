@@ -4,6 +4,13 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+/*
+ * UNED II Cuatrimestre
+ * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
+ * Estudiante: Andrew Jeshua Telles Calderón
+ * Fecha 16/6/2024
+ */
+
 namespace Cinema.Interfaz
 {
     public partial class frmInicio : Form
@@ -36,12 +43,12 @@ namespace Cinema.Interfaz
         //Ventanas de Registro
         private void Registrar_Categoria_Click(object sender, EventArgs e)
         {
-            ShowForm(new CATEGORIA_PELICULA());
+            ShowForm(new frmCATEGORIA_PELICULA());
         }
 
         private void Registrar_Pelicula_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmPELICULA());
         }
 
         private void Registrar_Encargado_Click(object sender, EventArgs e)

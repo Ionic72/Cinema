@@ -1,0 +1,20 @@
+﻿{
+    //Diccionario de almenos 15 idiomas utilizados en las películas
+    "Idiomas": {
+        "Español": "es",
+        "Inglés": "en",
+        "Chino": "zh",
+        "Japones": "ja",
+        "Italiano": "it",
+        "Alemán": "de",
+        "Portugues": "pt",
+        "Francés": "fr",
+        "Ruso": "ru",
+        "Vietnamita": "vi",
+        "Árabe": "ar",
+        "Hindi": "hi",
+        "Coreano": "ko",
+        "Sueco": "sv",
+        "Turco": "tr"
+    }
+}

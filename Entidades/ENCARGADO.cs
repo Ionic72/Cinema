@@ -1,4 +1,17 @@
-﻿namespace Entidades
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/*
+ * UNED II Cuatrimestre
+ * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
+ * Estudiante: Andrew Jeshua Telles Calderón
+ * Fecha 16/6/2024
+ */
+
+namespace Entidades
 {
     public class ENCARGADO
     {

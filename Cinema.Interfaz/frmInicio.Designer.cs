@@ -117,8 +117,9 @@
             panel1.Controls.Add(panel4);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(208, 776);
+            panel1.Size = new Size(182, 582);
             panel1.TabIndex = 0;
             // 
             // Consultar_menu
@@ -128,9 +129,10 @@
             Consultar_menu.Controls.Add(panel20);
             Consultar_menu.Controls.Add(panel27);
             Consultar_menu.Dock = DockStyle.Top;
-            Consultar_menu.Location = new Point(0, 542);
+            Consultar_menu.Location = new Point(0, 406);
+            Consultar_menu.Margin = new Padding(3, 2, 3, 2);
             Consultar_menu.Name = "Consultar_menu";
-            Consultar_menu.Size = new Size(187, 324);
+            Consultar_menu.Size = new Size(165, 243);
             Consultar_menu.TabIndex = 5;
             Consultar_menu.Visible = false;
             // 
@@ -143,9 +145,10 @@
             panel28.Controls.Add(Consultar_Pelicula);
             panel28.Controls.Add(Consultar_Categoria);
             panel28.Dock = DockStyle.Fill;
-            panel28.Location = new Point(65, 10);
+            panel28.Location = new Point(57, 8);
+            panel28.Margin = new Padding(3, 2, 3, 2);
             panel28.Name = "panel28";
-            panel28.Size = new Size(122, 314);
+            panel28.Size = new Size(108, 235);
             panel28.TabIndex = 16;
             // 
             // Consultar_Cliente
@@ -158,9 +161,10 @@
             Consultar_Cliente.FlatStyle = FlatStyle.Flat;
             Consultar_Cliente.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Cliente.ForeColor = Color.Gainsboro;
-            Consultar_Cliente.Location = new Point(0, 255);
+            Consultar_Cliente.Location = new Point(0, 192);
+            Consultar_Cliente.Margin = new Padding(3, 2, 3, 2);
             Consultar_Cliente.Name = "Consultar_Cliente";
-            Consultar_Cliente.Size = new Size(122, 51);
+            Consultar_Cliente.Size = new Size(108, 38);
             Consultar_Cliente.TabIndex = 5;
             Consultar_Cliente.Text = "CLIENTE";
             Consultar_Cliente.UseVisualStyleBackColor = false;
@@ -176,9 +180,10 @@
             Consultar_PeliculaxSucursal.FlatStyle = FlatStyle.Flat;
             Consultar_PeliculaxSucursal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_PeliculaxSucursal.ForeColor = Color.Gainsboro;
-            Consultar_PeliculaxSucursal.Location = new Point(0, 204);
+            Consultar_PeliculaxSucursal.Location = new Point(0, 154);
+            Consultar_PeliculaxSucursal.Margin = new Padding(3, 2, 3, 2);
             Consultar_PeliculaxSucursal.Name = "Consultar_PeliculaxSucursal";
-            Consultar_PeliculaxSucursal.Size = new Size(122, 51);
+            Consultar_PeliculaxSucursal.Size = new Size(108, 38);
             Consultar_PeliculaxSucursal.TabIndex = 4;
             Consultar_PeliculaxSucursal.Text = "PELÍCULA POR SUCURSAL";
             Consultar_PeliculaxSucursal.UseVisualStyleBackColor = false;
@@ -194,9 +199,10 @@
             Consultar_Sucusal.FlatStyle = FlatStyle.Flat;
             Consultar_Sucusal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Sucusal.ForeColor = Color.Gainsboro;
-            Consultar_Sucusal.Location = new Point(0, 153);
+            Consultar_Sucusal.Location = new Point(0, 116);
+            Consultar_Sucusal.Margin = new Padding(3, 2, 3, 2);
             Consultar_Sucusal.Name = "Consultar_Sucusal";
-            Consultar_Sucusal.Size = new Size(122, 51);
+            Consultar_Sucusal.Size = new Size(108, 38);
             Consultar_Sucusal.TabIndex = 3;
             Consultar_Sucusal.Text = "SUCURSAL";
             Consultar_Sucusal.UseVisualStyleBackColor = false;
@@ -212,9 +218,10 @@
             Consultar_Encargado.FlatStyle = FlatStyle.Flat;
             Consultar_Encargado.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Encargado.ForeColor = Color.Gainsboro;
-            Consultar_Encargado.Location = new Point(0, 102);
+            Consultar_Encargado.Location = new Point(0, 78);
+            Consultar_Encargado.Margin = new Padding(3, 2, 3, 2);
             Consultar_Encargado.Name = "Consultar_Encargado";
-            Consultar_Encargado.Size = new Size(122, 51);
+            Consultar_Encargado.Size = new Size(108, 38);
             Consultar_Encargado.TabIndex = 2;
             Consultar_Encargado.Text = "ENCARGADO";
             Consultar_Encargado.UseVisualStyleBackColor = false;
@@ -230,9 +237,10 @@
             Consultar_Pelicula.FlatStyle = FlatStyle.Flat;
             Consultar_Pelicula.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Pelicula.ForeColor = Color.Gainsboro;
-            Consultar_Pelicula.Location = new Point(0, 51);
+            Consultar_Pelicula.Location = new Point(0, 40);
+            Consultar_Pelicula.Margin = new Padding(3, 2, 3, 2);
             Consultar_Pelicula.Name = "Consultar_Pelicula";
-            Consultar_Pelicula.Size = new Size(122, 51);
+            Consultar_Pelicula.Size = new Size(108, 38);
             Consultar_Pelicula.TabIndex = 1;
             Consultar_Pelicula.Text = "PELICULA";
             Consultar_Pelicula.UseVisualStyleBackColor = false;
@@ -249,8 +257,9 @@
             Consultar_Categoria.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Categoria.ForeColor = Color.Gainsboro;
             Consultar_Categoria.Location = new Point(0, 0);
+            Consultar_Categoria.Margin = new Padding(3, 2, 3, 2);
             Consultar_Categoria.Name = "Consultar_Categoria";
-            Consultar_Categoria.Size = new Size(122, 51);
+            Consultar_Categoria.Size = new Size(108, 40);
             Consultar_Categoria.TabIndex = 0;
             Consultar_Categoria.Text = "CATEGORIA DE PELICULA";
             Consultar_Categoria.UseVisualStyleBackColor = false;
@@ -259,9 +268,10 @@
             // panel19
             // 
             panel19.Dock = DockStyle.Top;
-            panel19.Location = new Point(65, 0);
+            panel19.Location = new Point(57, 0);
+            panel19.Margin = new Padding(3, 2, 3, 2);
             panel19.Name = "panel19";
-            panel19.Size = new Size(122, 10);
+            panel19.Size = new Size(108, 8);
             panel19.TabIndex = 4;
             // 
             // panel20
@@ -279,18 +289,20 @@
             panel20.Controls.Add(pictureBox12);
             panel20.Controls.Add(panel26);
             panel20.Dock = DockStyle.Left;
-            panel20.Location = new Point(25, 0);
+            panel20.Location = new Point(22, 0);
+            panel20.Margin = new Padding(3, 2, 3, 2);
             panel20.Name = "panel20";
-            panel20.Size = new Size(40, 324);
+            panel20.Size = new Size(35, 243);
             panel20.TabIndex = 3;
             // 
             // pictureBox7
             // 
             pictureBox7.Dock = DockStyle.Top;
             pictureBox7.Image = Properties.Resources.cliente;
-            pictureBox7.Location = new Point(0, 275);
+            pictureBox7.Location = new Point(0, 206);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(40, 35);
+            pictureBox7.Size = new Size(35, 26);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 17;
             pictureBox7.TabStop = false;
@@ -298,18 +310,20 @@
             // panel21
             // 
             panel21.Dock = DockStyle.Top;
-            panel21.Location = new Point(0, 260);
+            panel21.Location = new Point(0, 195);
+            panel21.Margin = new Padding(3, 2, 3, 2);
             panel21.Name = "panel21";
-            panel21.Size = new Size(40, 15);
+            panel21.Size = new Size(35, 11);
             panel21.TabIndex = 16;
             // 
             // pictureBox8
             // 
             pictureBox8.Dock = DockStyle.Top;
             pictureBox8.Image = Properties.Resources.cartel_de_la_pelicula;
-            pictureBox8.Location = new Point(0, 216);
+            pictureBox8.Location = new Point(0, 162);
+            pictureBox8.Margin = new Padding(3, 2, 3, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(40, 44);
+            pictureBox8.Size = new Size(35, 33);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 15;
             pictureBox8.TabStop = false;
@@ -317,18 +331,20 @@
             // panel22
             // 
             panel22.Dock = DockStyle.Top;
-            panel22.Location = new Point(0, 206);
+            panel22.Location = new Point(0, 154);
+            panel22.Margin = new Padding(3, 2, 3, 2);
             panel22.Name = "panel22";
-            panel22.Size = new Size(40, 10);
+            panel22.Size = new Size(35, 8);
             panel22.TabIndex = 14;
             // 
             // pictureBox9
             // 
             pictureBox9.Dock = DockStyle.Top;
             pictureBox9.Image = Properties.Resources.sucursales;
-            pictureBox9.Location = new Point(0, 171);
+            pictureBox9.Location = new Point(0, 128);
+            pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(40, 35);
+            pictureBox9.Size = new Size(35, 26);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 13;
             pictureBox9.TabStop = false;
@@ -336,18 +352,20 @@
             // panel23
             // 
             panel23.Dock = DockStyle.Top;
-            panel23.Location = new Point(0, 156);
+            panel23.Location = new Point(0, 117);
+            panel23.Margin = new Padding(3, 2, 3, 2);
             panel23.Name = "panel23";
-            panel23.Size = new Size(40, 15);
+            panel23.Size = new Size(35, 11);
             panel23.TabIndex = 12;
             // 
             // pictureBox10
             // 
             pictureBox10.Dock = DockStyle.Top;
             pictureBox10.Image = Properties.Resources.empleado;
-            pictureBox10.Location = new Point(0, 121);
+            pictureBox10.Location = new Point(0, 91);
+            pictureBox10.Margin = new Padding(3, 2, 3, 2);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(40, 35);
+            pictureBox10.Size = new Size(35, 26);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 11;
             pictureBox10.TabStop = false;
@@ -355,18 +373,20 @@
             // panel24
             // 
             panel24.Dock = DockStyle.Top;
-            panel24.Location = new Point(0, 106);
+            panel24.Location = new Point(0, 80);
+            panel24.Margin = new Padding(3, 2, 3, 2);
             panel24.Name = "panel24";
-            panel24.Size = new Size(40, 15);
+            panel24.Size = new Size(35, 11);
             panel24.TabIndex = 10;
             // 
             // pictureBox11
             // 
             pictureBox11.Dock = DockStyle.Top;
             pictureBox11.Image = Properties.Resources.rollo_de_pelicula;
-            pictureBox11.Location = new Point(0, 71);
+            pictureBox11.Location = new Point(0, 54);
+            pictureBox11.Margin = new Padding(3, 2, 3, 2);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(40, 35);
+            pictureBox11.Size = new Size(35, 26);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox11.TabIndex = 9;
             pictureBox11.TabStop = false;
@@ -374,18 +394,20 @@
             // panel25
             // 
             panel25.Dock = DockStyle.Top;
-            panel25.Location = new Point(0, 53);
+            panel25.Location = new Point(0, 40);
+            panel25.Margin = new Padding(3, 2, 3, 2);
             panel25.Name = "panel25";
-            panel25.Size = new Size(40, 18);
+            panel25.Size = new Size(35, 14);
             panel25.TabIndex = 8;
             // 
             // pictureBox12
             // 
             pictureBox12.Dock = DockStyle.Top;
             pictureBox12.Image = Properties.Resources.menu;
-            pictureBox12.Location = new Point(0, 18);
+            pictureBox12.Location = new Point(0, 14);
+            pictureBox12.Margin = new Padding(3, 2, 3, 2);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(40, 35);
+            pictureBox12.Size = new Size(35, 26);
             pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox12.TabIndex = 7;
             pictureBox12.TabStop = false;
@@ -394,25 +416,28 @@
             // 
             panel26.Dock = DockStyle.Top;
             panel26.Location = new Point(0, 0);
+            panel26.Margin = new Padding(3, 2, 3, 2);
             panel26.Name = "panel26";
-            panel26.Size = new Size(40, 18);
+            panel26.Size = new Size(35, 14);
             panel26.TabIndex = 0;
             // 
             // panel27
             // 
             panel27.Dock = DockStyle.Left;
             panel27.Location = new Point(0, 0);
+            panel27.Margin = new Padding(3, 2, 3, 2);
             panel27.Name = "panel27";
-            panel27.Size = new Size(25, 324);
+            panel27.Size = new Size(22, 243);
             panel27.TabIndex = 1;
             // 
             // panel17
             // 
             panel17.Controls.Add(ConsultarBTN);
             panel17.Dock = DockStyle.Top;
-            panel17.Location = new Point(0, 487);
+            panel17.Location = new Point(0, 365);
+            panel17.Margin = new Padding(3, 2, 3, 2);
             panel17.Name = "panel17";
-            panel17.Size = new Size(187, 55);
+            panel17.Size = new Size(165, 41);
             panel17.TabIndex = 4;
             // 
             // ConsultarBTN
@@ -425,8 +450,9 @@
             ConsultarBTN.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             ConsultarBTN.ForeColor = Color.Gainsboro;
             ConsultarBTN.Location = new Point(0, 0);
+            ConsultarBTN.Margin = new Padding(3, 2, 3, 2);
             ConsultarBTN.Name = "ConsultarBTN";
-            ConsultarBTN.Size = new Size(187, 55);
+            ConsultarBTN.Size = new Size(165, 41);
             ConsultarBTN.TabIndex = 6;
             ConsultarBTN.Text = "CONSULTAR";
             ConsultarBTN.UseVisualStyleBackColor = false;
@@ -439,9 +465,10 @@
             Registrar_menu.Controls.Add(panel7);
             Registrar_menu.Controls.Add(panel8);
             Registrar_menu.Dock = DockStyle.Top;
-            Registrar_menu.Location = new Point(0, 163);
+            Registrar_menu.Location = new Point(0, 122);
+            Registrar_menu.Margin = new Padding(3, 2, 3, 2);
             Registrar_menu.Name = "Registrar_menu";
-            Registrar_menu.Size = new Size(187, 324);
+            Registrar_menu.Size = new Size(165, 243);
             Registrar_menu.TabIndex = 3;
             Registrar_menu.Visible = false;
             // 
@@ -454,9 +481,10 @@
             panel6.Controls.Add(Registrar_Pelicula);
             panel6.Controls.Add(Registrar_Categoria);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(65, 10);
+            panel6.Location = new Point(57, 8);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(122, 314);
+            panel6.Size = new Size(108, 235);
             panel6.TabIndex = 15;
             // 
             // Registrar_Cliente
@@ -469,9 +497,10 @@
             Registrar_Cliente.FlatStyle = FlatStyle.Flat;
             Registrar_Cliente.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Cliente.ForeColor = Color.Gainsboro;
-            Registrar_Cliente.Location = new Point(0, 255);
+            Registrar_Cliente.Location = new Point(0, 192);
+            Registrar_Cliente.Margin = new Padding(3, 2, 3, 2);
             Registrar_Cliente.Name = "Registrar_Cliente";
-            Registrar_Cliente.Size = new Size(122, 51);
+            Registrar_Cliente.Size = new Size(108, 38);
             Registrar_Cliente.TabIndex = 5;
             Registrar_Cliente.Text = "CLIENTE";
             Registrar_Cliente.UseVisualStyleBackColor = false;
@@ -487,9 +516,10 @@
             Registrar_PeliculaxSucursal.FlatStyle = FlatStyle.Flat;
             Registrar_PeliculaxSucursal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_PeliculaxSucursal.ForeColor = Color.Gainsboro;
-            Registrar_PeliculaxSucursal.Location = new Point(0, 204);
+            Registrar_PeliculaxSucursal.Location = new Point(0, 154);
+            Registrar_PeliculaxSucursal.Margin = new Padding(3, 2, 3, 2);
             Registrar_PeliculaxSucursal.Name = "Registrar_PeliculaxSucursal";
-            Registrar_PeliculaxSucursal.Size = new Size(122, 51);
+            Registrar_PeliculaxSucursal.Size = new Size(108, 38);
             Registrar_PeliculaxSucursal.TabIndex = 4;
             Registrar_PeliculaxSucursal.Text = "PELÍCULA POR SUCURSAL";
             Registrar_PeliculaxSucursal.UseVisualStyleBackColor = false;
@@ -505,9 +535,10 @@
             Registrar_Sucursal.FlatStyle = FlatStyle.Flat;
             Registrar_Sucursal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Sucursal.ForeColor = Color.Gainsboro;
-            Registrar_Sucursal.Location = new Point(0, 153);
+            Registrar_Sucursal.Location = new Point(0, 116);
+            Registrar_Sucursal.Margin = new Padding(3, 2, 3, 2);
             Registrar_Sucursal.Name = "Registrar_Sucursal";
-            Registrar_Sucursal.Size = new Size(122, 51);
+            Registrar_Sucursal.Size = new Size(108, 38);
             Registrar_Sucursal.TabIndex = 3;
             Registrar_Sucursal.Text = "SUCURSAL";
             Registrar_Sucursal.UseVisualStyleBackColor = false;
@@ -523,9 +554,10 @@
             Registrar_Encargado.FlatStyle = FlatStyle.Flat;
             Registrar_Encargado.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Encargado.ForeColor = Color.Gainsboro;
-            Registrar_Encargado.Location = new Point(0, 102);
+            Registrar_Encargado.Location = new Point(0, 78);
+            Registrar_Encargado.Margin = new Padding(3, 2, 3, 2);
             Registrar_Encargado.Name = "Registrar_Encargado";
-            Registrar_Encargado.Size = new Size(122, 51);
+            Registrar_Encargado.Size = new Size(108, 38);
             Registrar_Encargado.TabIndex = 2;
             Registrar_Encargado.Text = "ENCARGADO";
             Registrar_Encargado.UseVisualStyleBackColor = false;
@@ -541,9 +573,10 @@
             Registrar_Pelicula.FlatStyle = FlatStyle.Flat;
             Registrar_Pelicula.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Pelicula.ForeColor = Color.Gainsboro;
-            Registrar_Pelicula.Location = new Point(0, 51);
+            Registrar_Pelicula.Location = new Point(0, 40);
+            Registrar_Pelicula.Margin = new Padding(3, 2, 3, 2);
             Registrar_Pelicula.Name = "Registrar_Pelicula";
-            Registrar_Pelicula.Size = new Size(122, 51);
+            Registrar_Pelicula.Size = new Size(108, 38);
             Registrar_Pelicula.TabIndex = 1;
             Registrar_Pelicula.Text = "PELICULA";
             Registrar_Pelicula.UseVisualStyleBackColor = false;
@@ -560,8 +593,9 @@
             Registrar_Categoria.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Categoria.ForeColor = Color.Gainsboro;
             Registrar_Categoria.Location = new Point(0, 0);
+            Registrar_Categoria.Margin = new Padding(3, 2, 3, 2);
             Registrar_Categoria.Name = "Registrar_Categoria";
-            Registrar_Categoria.Size = new Size(122, 51);
+            Registrar_Categoria.Size = new Size(108, 40);
             Registrar_Categoria.TabIndex = 0;
             Registrar_Categoria.Text = "CATEGORIA DE PELICULA";
             Registrar_Categoria.UseVisualStyleBackColor = false;
@@ -570,9 +604,10 @@
             // panel9
             // 
             panel9.Dock = DockStyle.Top;
-            panel9.Location = new Point(65, 0);
+            panel9.Location = new Point(57, 0);
+            panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(122, 10);
+            panel9.Size = new Size(108, 8);
             panel9.TabIndex = 4;
             // 
             // panel7
@@ -590,18 +625,20 @@
             panel7.Controls.Add(pictureBox1);
             panel7.Controls.Add(panel11);
             panel7.Dock = DockStyle.Left;
-            panel7.Location = new Point(25, 0);
+            panel7.Location = new Point(22, 0);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(40, 324);
+            panel7.Size = new Size(35, 243);
             panel7.TabIndex = 3;
             // 
             // pictureBox6
             // 
             pictureBox6.Dock = DockStyle.Top;
             pictureBox6.Image = Properties.Resources.cliente;
-            pictureBox6.Location = new Point(0, 275);
+            pictureBox6.Location = new Point(0, 206);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(40, 35);
+            pictureBox6.Size = new Size(35, 26);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 17;
             pictureBox6.TabStop = false;
@@ -609,18 +646,20 @@
             // panel16
             // 
             panel16.Dock = DockStyle.Top;
-            panel16.Location = new Point(0, 260);
+            panel16.Location = new Point(0, 195);
+            panel16.Margin = new Padding(3, 2, 3, 2);
             panel16.Name = "panel16";
-            panel16.Size = new Size(40, 15);
+            panel16.Size = new Size(35, 11);
             panel16.TabIndex = 16;
             // 
             // pictureBox5
             // 
             pictureBox5.Dock = DockStyle.Top;
             pictureBox5.Image = Properties.Resources.cartel_de_la_pelicula;
-            pictureBox5.Location = new Point(0, 216);
+            pictureBox5.Location = new Point(0, 162);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(40, 44);
+            pictureBox5.Size = new Size(35, 33);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 15;
             pictureBox5.TabStop = false;
@@ -628,18 +667,20 @@
             // panel15
             // 
             panel15.Dock = DockStyle.Top;
-            panel15.Location = new Point(0, 206);
+            panel15.Location = new Point(0, 154);
+            panel15.Margin = new Padding(3, 2, 3, 2);
             panel15.Name = "panel15";
-            panel15.Size = new Size(40, 10);
+            panel15.Size = new Size(35, 8);
             panel15.TabIndex = 14;
             // 
             // pictureBox4
             // 
             pictureBox4.Dock = DockStyle.Top;
             pictureBox4.Image = Properties.Resources.sucursales;
-            pictureBox4.Location = new Point(0, 171);
+            pictureBox4.Location = new Point(0, 128);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 35);
+            pictureBox4.Size = new Size(35, 26);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 13;
             pictureBox4.TabStop = false;
@@ -647,18 +688,20 @@
             // panel14
             // 
             panel14.Dock = DockStyle.Top;
-            panel14.Location = new Point(0, 156);
+            panel14.Location = new Point(0, 117);
+            panel14.Margin = new Padding(3, 2, 3, 2);
             panel14.Name = "panel14";
-            panel14.Size = new Size(40, 15);
+            panel14.Size = new Size(35, 11);
             panel14.TabIndex = 12;
             // 
             // pictureBox3
             // 
             pictureBox3.Dock = DockStyle.Top;
             pictureBox3.Image = Properties.Resources.empleado;
-            pictureBox3.Location = new Point(0, 121);
+            pictureBox3.Location = new Point(0, 91);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 35);
+            pictureBox3.Size = new Size(35, 26);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
@@ -666,18 +709,20 @@
             // panel13
             // 
             panel13.Dock = DockStyle.Top;
-            panel13.Location = new Point(0, 106);
+            panel13.Location = new Point(0, 80);
+            panel13.Margin = new Padding(3, 2, 3, 2);
             panel13.Name = "panel13";
-            panel13.Size = new Size(40, 15);
+            panel13.Size = new Size(35, 11);
             panel13.TabIndex = 10;
             // 
             // pictureBox2
             // 
             pictureBox2.Dock = DockStyle.Top;
             pictureBox2.Image = Properties.Resources.rollo_de_pelicula;
-            pictureBox2.Location = new Point(0, 71);
+            pictureBox2.Location = new Point(0, 54);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 35);
+            pictureBox2.Size = new Size(35, 26);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
@@ -685,18 +730,20 @@
             // panel12
             // 
             panel12.Dock = DockStyle.Top;
-            panel12.Location = new Point(0, 53);
+            panel12.Location = new Point(0, 40);
+            panel12.Margin = new Padding(3, 2, 3, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(40, 18);
+            panel12.Size = new Size(35, 14);
             panel12.TabIndex = 8;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = Properties.Resources.menu;
-            pictureBox1.Location = new Point(0, 18);
+            pictureBox1.Location = new Point(0, 14);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 35);
+            pictureBox1.Size = new Size(35, 26);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -705,25 +752,28 @@
             // 
             panel11.Dock = DockStyle.Top;
             panel11.Location = new Point(0, 0);
+            panel11.Margin = new Padding(3, 2, 3, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(40, 18);
+            panel11.Size = new Size(35, 14);
             panel11.TabIndex = 0;
             // 
             // panel8
             // 
             panel8.Dock = DockStyle.Left;
             panel8.Location = new Point(0, 0);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(25, 324);
+            panel8.Size = new Size(22, 243);
             panel8.TabIndex = 1;
             // 
             // panel5
             // 
             panel5.Controls.Add(RegistrarBTN);
             panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(0, 108);
+            panel5.Location = new Point(0, 81);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(187, 55);
+            panel5.Size = new Size(165, 41);
             panel5.TabIndex = 2;
             // 
             // RegistrarBTN
@@ -736,8 +786,9 @@
             RegistrarBTN.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             RegistrarBTN.ForeColor = Color.Gainsboro;
             RegistrarBTN.Location = new Point(0, 0);
+            RegistrarBTN.Margin = new Padding(3, 2, 3, 2);
             RegistrarBTN.Name = "RegistrarBTN";
-            RegistrarBTN.Size = new Size(187, 55);
+            RegistrarBTN.Size = new Size(165, 41);
             RegistrarBTN.TabIndex = 6;
             RegistrarBTN.Text = "REGISTRAR";
             RegistrarBTN.UseVisualStyleBackColor = false;
@@ -748,10 +799,11 @@
             panel4.Controls.Add(label1);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Padding = new Padding(41);
+            panel4.Padding = new Padding(36, 31, 36, 31);
             panel4.RightToLeft = RightToLeft.No;
-            panel4.Size = new Size(187, 108);
+            panel4.Size = new Size(165, 81);
             panel4.TabIndex = 1;
             // 
             // label1
@@ -759,9 +811,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(41, 41);
+            label1.Location = new Point(36, 31);
             label1.Name = "label1";
-            label1.Size = new Size(131, 35);
+            label1.Size = new Size(104, 28);
             label1.TabIndex = 0;
             label1.Text = "CINEMA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -770,18 +822,20 @@
             // 
             Ventana.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Ventana.BackColor = Color.FromArgb(27, 30, 35);
-            Ventana.Location = new Point(208, 0);
+            Ventana.Location = new Point(182, 0);
+            Ventana.Margin = new Padding(3, 2, 3, 2);
             Ventana.Name = "Ventana";
-            Ventana.Size = new Size(1254, 776);
+            Ventana.Size = new Size(1097, 582);
             Ventana.TabIndex = 9;
             // 
             // frmInicio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1462, 776);
+            ClientSize = new Size(1279, 582);
             Controls.Add(Ventana);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmInicio";
             Text = "Form1";
             panel1.ResumeLayout(false);
