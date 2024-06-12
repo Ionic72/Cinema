@@ -82,6 +82,7 @@
             panel4 = new Panel();
             label1 = new Label();
             Ventana = new Panel();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             Consultar_menu.SuspendLayout();
             panel28.SuspendLayout();
@@ -161,7 +162,7 @@
             Consultar_Cliente.FlatStyle = FlatStyle.Flat;
             Consultar_Cliente.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_Cliente.ForeColor = Color.Gainsboro;
-            Consultar_Cliente.Location = new Point(0, 192);
+            Consultar_Cliente.Location = new Point(0, 194);
             Consultar_Cliente.Margin = new Padding(3, 2, 3, 2);
             Consultar_Cliente.Name = "Consultar_Cliente";
             Consultar_Cliente.Size = new Size(108, 38);
@@ -178,12 +179,12 @@
             Consultar_PeliculaxSucursal.FlatAppearance.BorderColor = Color.LightGray;
             Consultar_PeliculaxSucursal.FlatAppearance.BorderSize = 0;
             Consultar_PeliculaxSucursal.FlatStyle = FlatStyle.Flat;
-            Consultar_PeliculaxSucursal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
+            Consultar_PeliculaxSucursal.Font = new Font("Arial", 9.75F, FontStyle.Underline, GraphicsUnit.Point);
             Consultar_PeliculaxSucursal.ForeColor = Color.Gainsboro;
             Consultar_PeliculaxSucursal.Location = new Point(0, 154);
             Consultar_PeliculaxSucursal.Margin = new Padding(3, 2, 3, 2);
             Consultar_PeliculaxSucursal.Name = "Consultar_PeliculaxSucursal";
-            Consultar_PeliculaxSucursal.Size = new Size(108, 38);
+            Consultar_PeliculaxSucursal.Size = new Size(108, 40);
             Consultar_PeliculaxSucursal.TabIndex = 4;
             Consultar_PeliculaxSucursal.Text = "PELÍCULA POR SUCURSAL";
             Consultar_PeliculaxSucursal.UseVisualStyleBackColor = false;
@@ -497,7 +498,7 @@
             Registrar_Cliente.FlatStyle = FlatStyle.Flat;
             Registrar_Cliente.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_Cliente.ForeColor = Color.Gainsboro;
-            Registrar_Cliente.Location = new Point(0, 192);
+            Registrar_Cliente.Location = new Point(0, 194);
             Registrar_Cliente.Margin = new Padding(3, 2, 3, 2);
             Registrar_Cliente.Name = "Registrar_Cliente";
             Registrar_Cliente.Size = new Size(108, 38);
@@ -514,12 +515,12 @@
             Registrar_PeliculaxSucursal.FlatAppearance.BorderColor = Color.LightGray;
             Registrar_PeliculaxSucursal.FlatAppearance.BorderSize = 0;
             Registrar_PeliculaxSucursal.FlatStyle = FlatStyle.Flat;
-            Registrar_PeliculaxSucursal.Font = new Font("Arial", 10.2F, FontStyle.Underline, GraphicsUnit.Point);
+            Registrar_PeliculaxSucursal.Font = new Font("Arial", 9.75F, FontStyle.Underline, GraphicsUnit.Point);
             Registrar_PeliculaxSucursal.ForeColor = Color.Gainsboro;
             Registrar_PeliculaxSucursal.Location = new Point(0, 154);
             Registrar_PeliculaxSucursal.Margin = new Padding(3, 2, 3, 2);
             Registrar_PeliculaxSucursal.Name = "Registrar_PeliculaxSucursal";
-            Registrar_PeliculaxSucursal.Size = new Size(108, 38);
+            Registrar_PeliculaxSucursal.Size = new Size(108, 40);
             Registrar_PeliculaxSucursal.TabIndex = 4;
             Registrar_PeliculaxSucursal.Text = "PELÍCULA POR SUCURSAL";
             Registrar_PeliculaxSucursal.UseVisualStyleBackColor = false;
@@ -822,17 +823,27 @@
             // 
             Ventana.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Ventana.BackColor = Color.FromArgb(27, 30, 35);
-            Ventana.Location = new Point(182, 0);
+            Ventana.Location = new Point(182, 2);
             Ventana.Margin = new Padding(3, 2, 3, 2);
             Ventana.Name = "Ventana";
-            Ventana.Size = new Size(1097, 582);
+            Ventana.Size = new Size(1097, 580);
             Ventana.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Teal;
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(182, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1097, 30);
+            panel2.TabIndex = 10;
             // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1279, 582);
+            Controls.Add(panel2);
             Controls.Add(Ventana);
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
@@ -920,5 +931,6 @@
         private Button Consultar_Categoria;
         private Panel panel27;
         private Panel Ventana;
+        private Panel panel2;
     }
 }

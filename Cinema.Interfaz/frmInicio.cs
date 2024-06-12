@@ -53,12 +53,12 @@ namespace Cinema.Interfaz
 
         private void Registrar_Encargado_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmENCARGADO());
         }
 
         private void Registrar_Sucursal_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmSUCURSAL());
         }
 
         private void Registrar_PeliculaxSucursal_Click(object sender, EventArgs e)

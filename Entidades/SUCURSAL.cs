@@ -16,11 +16,11 @@ namespace Cinema.Entidades
 {
     public  class SUCURSAL
     {
-        private int SucursalID { get; set; }
-        private string Nombre { get; set; }
-        private ENCARGADO Encargado { get; set; }
-        private string Direccion { get; set; }
-        private string Telefono { get; set; }
-        private bool Activo { get; set; }
+        public int SucursalID { get; set; }
+        public string Nombre { get; set; }
+        public ENCARGADO Encargado { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public bool Activo { get; set; }
     }
 }

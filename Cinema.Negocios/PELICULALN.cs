@@ -78,11 +78,11 @@ namespace Cinema.Negocios
         public CATEGORIA_PELICULA ObtenerCategoria(string NombreCategoría)
         {
             CategoriaPelicula = categoria.ObtenerCategorias();
-            for (int i = 0; i < CategoriaPelicula.Length; i++)
+            foreach(var categorias in CategoriaPelicula)
             {
-                if (CategoriaPelicula[i].NombreCategoria == NombreCategoría)
+                if (categorias.NombreCategoria == NombreCategoría)
                 {
-                    return CategoriaPelicula[i];
+                    return categorias;
                 }
             }
             throw new Exception("La categoría ingresada no esta agregada!");

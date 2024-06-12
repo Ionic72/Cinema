@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cinema.Entidades;
 using Cinema.Negocios;
-using Entidades;
 using Microsoft.VisualBasic;
 
 /*
@@ -22,21 +21,24 @@ using Microsoft.VisualBasic;
 
 namespace Cinema.Interfaz.REGISTRAR
 {
-    public partial class frmENCARGADO : Form
+    public partial class frmSUCURSAL : Form
     {
-        private ENCARGADOLN EncargadoLN = ENCARGADOLN.Instancia;
-        private ENCARGADO newEncargado = new ENCARGADO();
+        private SUCURSALLN SucursalLN = SUCURSALLN.Instancia;
+        private SUCURSAL newSucursal = new SUCURSAL();
         private int cant;
 
-        public frmENCARGADO()
+        public frmSUCURSAL()
         {
             InitializeComponent();
             CantidadDisponible();
+            Activo.Items.Add("No");
+            Activo.Items.Add("Si");
+            Activo.SelectedIndex = 0;
         }
 
         private void CantidadDisponible()
         {
-            cant = EncargadoLN.CantidadDisponible();
+            cant = SucursalLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -44,22 +46,21 @@ namespace Cinema.Interfaz.REGISTRAR
         {
             try
             {
-                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Ingreso.Text)){throw new Exception("Faltan datos por llenar");}
-                newEncargado.EncargadoID = Convert.ToInt32(ID.Text);
-                newEncargado.Identificacion = Cedula.Text;
-                newEncargado.Nombre = Nombre.Text.ToUpper();
-                newEncargado.P_Apellido = P_Apellido.Text.ToUpper();
-                newEncargado.S_Apellido = S_Apellido.Text.ToUpper();
-                newEncargado.F_Nacimiento = F_Nacimiento.Value;
-                newEncargado.F_Ingreso = F_Ingreso.Value;
-                EncargadoLN.AgregarEncargado(newEncargado);
-                cant--;  Cantidad.Text = $"Almacenamiento disponible: {cant}";
-                ID.Clear(); Cedula.Clear(); Nombre.Clear(); P_Apellido.Clear(); S_Apellido.Clear(); //Se limpian los textbox's
-                MessageBox.Show("Exito al almacenar el Encargado!");
+                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(Encargado.Text) || string.IsNullOrEmpty(Direccion.Text) || string.IsNullOrEmpty(Telefono.Text)) { throw new Exception("Faltan datos por llenar"); }
+                newSucursal.SucursalID = Convert.ToInt32(ID.Text);
+                newSucursal.Nombre = Nombre.Text.ToUpper();
+                newSucursal.Encargado = SucursalLN.ObtenerEncargado(Convert.ToInt32(Encargado.Text));
+                newSucursal.Direccion = Direccion.Text.ToLower();
+                newSucursal.Telefono = Telefono.Text;
+                newSucursal.Activo = Activo.SelectedIndex == 1; //Si el index no es un Si (Index 1), almacenara false
+                SucursalLN.AgregarSucursal(newSucursal);
+                cant--; Cantidad.Text = $"Almacenamiento disponible: {cant}";
+                ID.Clear(); Nombre.Clear(); Encargado.Clear(); Direccion.Clear(); Telefono.Clear(); //Se limpian los textbox's
+                MessageBox.Show("Exito al almacenar la Sucursal!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No fue posible almacenar el Encargado: {ex.Message}");
+                MessageBox.Show($"No fue posible almacenar la Sucursal: {ex.Message}");
             }
         }
 
@@ -75,10 +76,16 @@ namespace Cinema.Interfaz.REGISTRAR
         //Bloquear el ingreso de carácteres númericos
         private void Char_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        //Bloquea el acceso de cualquier tecla
+        private void BLOCK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla

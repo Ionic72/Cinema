@@ -30,22 +30,46 @@
         {
             Enviar = new Button();
             panel1 = new Panel();
-            ID = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            Title = new TextBox();
-            label3 = new Label();
-            Category = new TextBox();
             panel2 = new Panel();
-            Language = new TextBox();
-            label4 = new Label();
-            Year = new TextBox();
+            panel11 = new Panel();
+            panel12 = new Panel();
+            F_Ingreso = new DateTimePicker();
+            label6 = new Label();
+            panel13 = new Panel();
+            F_Nacimiento = new DateTimePicker();
+            label7 = new Label();
+            panel7 = new Panel();
+            panel10 = new Panel();
             label5 = new Label();
+            S_Apellido = new TextBox();
+            panel8 = new Panel();
+            label4 = new Label();
+            P_Apellido = new TextBox();
+            panel9 = new Panel();
+            label3 = new Label();
+            Nombre = new TextBox();
+            panel4 = new Panel();
+            panel6 = new Panel();
+            label2 = new Label();
+            Cedula = new TextBox();
+            panel5 = new Panel();
+            label1 = new Label();
+            ID = new TextBox();
             panel3 = new Panel();
             Label_Titulo = new Label();
             Cantidad = new Label();
             Titulo = new Panel();
             panel2.SuspendLayout();
+            panel11.SuspendLayout();
+            panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel7.SuspendLayout();
+            panel10.SuspendLayout();
+            panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            panel4.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             panel3.SuspendLayout();
             Titulo.SuspendLayout();
             SuspendLayout();
@@ -80,149 +104,295 @@
             panel1.Size = new Size(1097, 35);
             panel1.TabIndex = 5;
             // 
-            // ID
-            // 
-            ID.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            ID.Cursor = Cursors.IBeam;
-            ID.Location = new Point(29, 42);
-            ID.Margin = new Padding(3, 2, 3, 2);
-            ID.MaxLength = 5;
-            ID.Name = "ID";
-            ID.RightToLeft = RightToLeft.No;
-            ID.Size = new Size(1040, 23);
-            ID.TabIndex = 16;
-            ID.KeyPress += NUM_KeyPress;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(26, 22);
-            label1.Name = "label1";
-            label1.Padding = new Padding(4, 0, 0, 0);
-            label1.Size = new Size(152, 19);
-            label1.TabIndex = 17;
-            label1.Text = "ID DE PELÍCULAS";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(26, 94);
-            label2.Name = "label2";
-            label2.Padding = new Padding(4, 0, 0, 0);
-            label2.Size = new Size(71, 19);
-            label2.TabIndex = 18;
-            label2.Text = "TÍTULO";
-            // 
-            // Title
-            // 
-            Title.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Title.Cursor = Cursors.IBeam;
-            Title.Location = new Point(29, 115);
-            Title.Margin = new Padding(3, 2, 3, 2);
-            Title.Name = "Title";
-            Title.RightToLeft = RightToLeft.No;
-            Title.Size = new Size(1040, 23);
-            Title.TabIndex = 19;
-            Title.KeyPress += Char_KeyPress;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(26, 169);
-            label3.Name = "label3";
-            label3.Padding = new Padding(4, 0, 0, 0);
-            label3.Size = new Size(242, 19);
-            label3.TabIndex = 20;
-            label3.Text = "CATEGORÍA DE LA PELÍCULA";
-            // 
-            // Category
-            // 
-            Category.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Category.Cursor = Cursors.IBeam;
-            Category.Location = new Point(29, 189);
-            Category.Margin = new Padding(3, 2, 3, 2);
-            Category.Name = "Category";
-            Category.RightToLeft = RightToLeft.No;
-            Category.Size = new Size(1040, 23);
-            Category.TabIndex = 21;
-            Category.KeyPress += Char_KeyPress;
-            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(27, 30, 35);
-            panel2.Controls.Add(Language);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(Year);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(Category);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(Title);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(ID);
+            panel2.Controls.Add(panel11);
+            panel2.Controls.Add(panel7);
+            panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(26, 0, 26, 0);
+            panel2.Padding = new Padding(20, 0, 20, 0);
             panel2.RightToLeft = RightToLeft.No;
             panel2.Size = new Size(1097, 396);
             panel2.TabIndex = 7;
             // 
-            // Language
+            // panel11
             // 
-            Language.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Language.Cursor = Cursors.IBeam;
-            Language.Location = new Point(29, 338);
-            Language.Margin = new Padding(3, 2, 3, 2);
-            Language.Name = "Language";
-            Language.RightToLeft = RightToLeft.No;
-            Language.Size = new Size(1040, 23);
-            Language.TabIndex = 25;
-            Language.KeyPress += Char_KeyPress;
+            panel11.Controls.Add(panel12);
+            panel11.Controls.Add(panel13);
+            panel11.Dock = DockStyle.Top;
+            panel11.Location = new Point(20, 200);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(1057, 100);
+            panel11.TabIndex = 28;
             // 
-            // label4
+            // panel12
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(26, 317);
-            label4.Name = "label4";
-            label4.Padding = new Padding(4, 0, 0, 0);
-            label4.Size = new Size(69, 19);
-            label4.TabIndex = 24;
-            label4.Text = "IDIOMA";
+            panel12.Controls.Add(F_Ingreso);
+            panel12.Controls.Add(label6);
+            panel12.Dock = DockStyle.Right;
+            panel12.Location = new Point(535, 0);
+            panel12.Name = "panel12";
+            panel12.Padding = new Padding(25, 0, 0, 0);
+            panel12.Size = new Size(522, 100);
+            panel12.TabIndex = 1;
             // 
-            // Year
+            // F_Ingreso
             // 
-            Year.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Year.Cursor = Cursors.IBeam;
-            Year.Location = new Point(29, 263);
-            Year.Margin = new Padding(3, 2, 3, 2);
-            Year.MaxLength = 4;
-            Year.Name = "Year";
-            Year.RightToLeft = RightToLeft.No;
-            Year.Size = new Size(1040, 23);
-            Year.TabIndex = 23;
-            Year.KeyPress += NUM_KeyPress;
+            F_Ingreso.Location = new Point(28, 55);
+            F_Ingreso.Name = "F_Ingreso";
+            F_Ingreso.Size = new Size(494, 23);
+            F_Ingreso.TabIndex = 31;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(24, 37);
+            label6.Name = "label6";
+            label6.Padding = new Padding(4, 0, 0, 0);
+            label6.Size = new Size(173, 19);
+            label6.TabIndex = 30;
+            label6.Text = "FECHA DE INGRESO";
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(F_Nacimiento);
+            panel13.Controls.Add(label7);
+            panel13.Dock = DockStyle.Left;
+            panel13.Location = new Point(0, 0);
+            panel13.Name = "panel13";
+            panel13.Padding = new Padding(0, 0, 25, 0);
+            panel13.Size = new Size(522, 100);
+            panel13.TabIndex = 0;
+            // 
+            // F_Nacimiento
+            // 
+            F_Nacimiento.Location = new Point(-1, 55);
+            F_Nacimiento.Name = "F_Nacimiento";
+            F_Nacimiento.Size = new Size(495, 23);
+            F_Nacimiento.TabIndex = 29;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(3, 37);
+            label7.Name = "label7";
+            label7.Padding = new Padding(4, 0, 0, 0);
+            label7.Size = new Size(200, 19);
+            label7.TabIndex = 29;
+            label7.Text = "FECHA DE NACIMIENTO";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(panel10);
+            panel7.Controls.Add(panel8);
+            panel7.Controls.Add(panel9);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(20, 100);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1057, 100);
+            panel7.TabIndex = 27;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(label5);
+            panel10.Controls.Add(S_Apellido);
+            panel10.Dock = DockStyle.Right;
+            panel10.Location = new Point(705, 0);
+            panel10.Name = "panel10";
+            panel10.Padding = new Padding(25, 0, 0, 0);
+            panel10.Size = new Size(352, 100);
+            panel10.TabIndex = 2;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(26, 243);
+            label5.Location = new Point(28, 37);
             label5.Name = "label5";
             label5.Padding = new Padding(4, 0, 0, 0);
-            label5.Size = new Size(194, 19);
-            label5.TabIndex = 22;
-            label5.Text = "AÑO DE LANZAMIENTO";
+            label5.Size = new Size(179, 19);
+            label5.TabIndex = 32;
+            label5.Text = "SEGUNDO APELLIDO";
+            // 
+            // S_Apellido
+            // 
+            S_Apellido.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            S_Apellido.Cursor = Cursors.IBeam;
+            S_Apellido.Location = new Point(28, 58);
+            S_Apellido.Margin = new Padding(3, 2, 3, 2);
+            S_Apellido.Name = "S_Apellido";
+            S_Apellido.RightToLeft = RightToLeft.No;
+            S_Apellido.Size = new Size(321, 23);
+            S_Apellido.TabIndex = 31;
+            S_Apellido.KeyPress += Char_KeyPress;
+            // 
+            // panel8
+            // 
+            panel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel8.Controls.Add(label4);
+            panel8.Controls.Add(P_Apellido);
+            panel8.Location = new Point(350, 0);
+            panel8.Name = "panel8";
+            panel8.Padding = new Padding(25, 0, 25, 0);
+            panel8.Size = new Size(352, 100);
+            panel8.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(28, 37);
+            label4.Name = "label4";
+            label4.Padding = new Padding(4, 0, 0, 0);
+            label4.Size = new Size(160, 19);
+            label4.TabIndex = 32;
+            label4.Text = "PRIMER APELLIDO";
+            // 
+            // P_Apellido
+            // 
+            P_Apellido.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            P_Apellido.Cursor = Cursors.IBeam;
+            P_Apellido.Location = new Point(28, 58);
+            P_Apellido.Margin = new Padding(3, 2, 3, 2);
+            P_Apellido.Name = "P_Apellido";
+            P_Apellido.RightToLeft = RightToLeft.No;
+            P_Apellido.Size = new Size(296, 23);
+            P_Apellido.TabIndex = 29;
+            P_Apellido.KeyPress += Char_KeyPress;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(label3);
+            panel9.Controls.Add(Nombre);
+            panel9.Dock = DockStyle.Left;
+            panel9.Location = new Point(0, 0);
+            panel9.Name = "panel9";
+            panel9.Padding = new Padding(0, 0, 25, 0);
+            panel9.Size = new Size(352, 100);
+            panel9.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(3, 37);
+            label3.Name = "label3";
+            label3.Padding = new Padding(4, 0, 0, 0);
+            label3.Size = new Size(85, 19);
+            label3.TabIndex = 31;
+            label3.Text = "NOMBRE";
+            // 
+            // Nombre
+            // 
+            Nombre.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Nombre.Cursor = Cursors.IBeam;
+            Nombre.Location = new Point(0, 58);
+            Nombre.Margin = new Padding(3, 2, 3, 2);
+            Nombre.Name = "Nombre";
+            Nombre.RightToLeft = RightToLeft.No;
+            Nombre.Size = new Size(324, 23);
+            Nombre.TabIndex = 31;
+            Nombre.KeyPress += Char_KeyPress;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(panel6);
+            panel4.Controls.Add(panel5);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(20, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1057, 100);
+            panel4.TabIndex = 26;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(Cedula);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(535, 0);
+            panel6.Name = "panel6";
+            panel6.Padding = new Padding(25, 0, 0, 0);
+            panel6.Size = new Size(522, 100);
+            panel6.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(24, 37);
+            label2.Name = "label2";
+            label2.Padding = new Padding(4, 0, 0, 0);
+            label2.Size = new Size(143, 19);
+            label2.TabIndex = 30;
+            label2.Text = "IDENTIFICACIÓN";
+            // 
+            // Cedula
+            // 
+            Cedula.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Cedula.Cursor = Cursors.IBeam;
+            Cedula.Location = new Point(28, 58);
+            Cedula.Margin = new Padding(3, 2, 3, 2);
+            Cedula.MaxLength = 9;
+            Cedula.Name = "Cedula";
+            Cedula.RightToLeft = RightToLeft.No;
+            Cedula.Size = new Size(491, 23);
+            Cedula.TabIndex = 29;
+            Cedula.KeyPress += NUM_KeyPress;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(label1);
+            panel5.Controls.Add(ID);
+            panel5.Dock = DockStyle.Left;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Padding = new Padding(0, 0, 25, 0);
+            panel5.Size = new Size(522, 100);
+            panel5.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(3, 37);
+            label1.Name = "label1";
+            label1.Padding = new Padding(4, 0, 0, 0);
+            label1.Size = new Size(161, 19);
+            label1.TabIndex = 29;
+            label1.Text = "ID DEL EMPLEADO";
+            // 
+            // ID
+            // 
+            ID.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            ID.Cursor = Cursors.IBeam;
+            ID.Location = new Point(-1, 58);
+            ID.Margin = new Padding(3, 2, 3, 2);
+            ID.MaxLength = 5;
+            ID.Name = "ID";
+            ID.RightToLeft = RightToLeft.No;
+            ID.Size = new Size(495, 23);
+            ID.TabIndex = 28;
+            ID.KeyPress += NUM_KeyPress;
             // 
             // panel3
             // 
@@ -240,9 +410,9 @@
             Label_Titulo.Font = new Font("Arial", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
             Label_Titulo.Location = new Point(170, 13);
             Label_Titulo.Name = "Label_Titulo";
-            Label_Titulo.Size = new Size(457, 43);
+            Label_Titulo.Size = new Size(493, 43);
             Label_Titulo.TabIndex = 0;
-            Label_Titulo.Text = "REGISTRAR PELÍCULAS";
+            Label_Titulo.Text = "REGISTRAR ENCARGADO";
             Label_Titulo.TextAlign = ContentAlignment.TopCenter;
             // 
             // Cantidad
@@ -270,7 +440,7 @@
             Titulo.Size = new Size(1097, 64);
             Titulo.TabIndex = 6;
             // 
-            // frmPELICULA
+            // frmENCARGADO
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -282,11 +452,27 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "frmPELICULA";
+            Name = "frmENCARGADO";
             Text = "CATEGORIA_PELICULA";
             SizeChanged += Form_SizeChanged;
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             panel3.ResumeLayout(false);
             Titulo.ResumeLayout(false);
             Titulo.PerformLayout();
@@ -296,20 +482,34 @@
         #endregion
         private Button Enviar;
         private Panel panel1;
-        private TextBox ID;
-        private Label label1;
-        private Label label2;
-        private TextBox Title;
-        private Label label3;
-        private TextBox Category;
         private Panel panel2;
         private Panel panel3;
         private Label Label_Titulo;
         private Label Cantidad;
         private Panel Titulo;
-        private TextBox Language;
-        private Label label4;
-        private TextBox Year;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private TextBox Cedula;
+        private TextBox ID;
+        private Label label1;
+        private Label label2;
+        private Panel panel7;
+        private Panel panel8;
+        private TextBox P_Apellido;
+        private Panel panel9;
+        private Panel panel10;
+        private TextBox S_Apellido;
+        private Label label3;
+        private TextBox Nombre;
         private Label label5;
+        private Label label4;
+        private Panel panel11;
+        private Panel panel12;
+        private Label label6;
+        private Panel panel13;
+        private Label label7;
+        private DateTimePicker F_Ingreso;
+        private DateTimePicker F_Nacimiento;
     }
 }

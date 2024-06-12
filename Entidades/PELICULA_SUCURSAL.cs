@@ -15,8 +15,8 @@ namespace Cinema.Entidades
 {
     public class PELICULA_SUCURSAL
     {
-        private SUCURSAL Sucursal { get; set; }
-        private PELICULA Pelicula { get; set; }
-        private int Cantidad { get; set; }
+        public SUCURSAL Sucursal { get; set; }
+        public PELICULA Pelicula { get; set; }
+        public int Cantidad { get; set; }
     }
 }
