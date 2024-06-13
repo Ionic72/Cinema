@@ -63,12 +63,12 @@ namespace Cinema.Interfaz
 
         private void Registrar_PeliculaxSucursal_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmPELICULAxSUCURSAL());
         }
 
         private void Registrar_Cliente_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmCLIENTE());
         }
 
         //Ventanas de Consulta

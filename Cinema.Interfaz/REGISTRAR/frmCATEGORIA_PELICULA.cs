@@ -24,8 +24,7 @@ namespace Cinema.Interfaz.REGISTRAR
     public partial class frmCATEGORIA_PELICULA : Form
     {
         private CATEGORIA_PELICULALN CategoriaPeliculaLN = CATEGORIA_PELICULALN.Instancia;
-        private CATEGORIA_PELICULA newCategoriaPelicula = new CATEGORIA_PELICULA();
-        private int cant;
+
         public frmCATEGORIA_PELICULA()
         {
             InitializeComponent();
@@ -34,7 +33,7 @@ namespace Cinema.Interfaz.REGISTRAR
 
         private void CantidadDisponible()
         {
-            cant = CategoriaPeliculaLN.CantidadDisponible();
+            int cant = CategoriaPeliculaLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -43,11 +42,13 @@ namespace Cinema.Interfaz.REGISTRAR
             try
             {
                 if(string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(Descripcion.Text)) { throw new Exception("Faltan datos por llenar"); }
-                newCategoriaPelicula.CategoriaID = Convert.ToInt32(ID.Text);
-                newCategoriaPelicula.NombreCategoria = Nombre.Text.ToUpper();
-                newCategoriaPelicula.Descripcion = Descripcion.Text;
-                CategoriaPeliculaLN.AgregarCategoria(newCategoriaPelicula);
-                cant--; Cantidad.Text = $"Almacenamiento disponible: {cant}";
+                CATEGORIA_PELICULA newCategoria = new CATEGORIA_PELICULA {
+                    CategoriaID = Convert.ToInt32(ID.Text),
+                    NombreCategoria = Nombre.Text.ToUpper(),
+                    Descripcion = Descripcion.Text
+                };
+                CategoriaPeliculaLN.AgregarCategoria(newCategoria);
+                CantidadDisponible();
                 Nombre.Clear(); ID.Clear(); Descripcion.Clear(); //Se limpian los textbox's
                 MessageBox.Show("Exito al almacenar la Categoría!");
             } catch(Exception ex)

@@ -21,19 +21,20 @@ using Microsoft.VisualBasic;
 
 namespace Cinema.Interfaz.REGISTRAR
 {
-    public partial class frmENCARGADO : Form
+    public partial class frmPELICULAxSUCURSAL : Form
     {
-        private readonly ENCARGADOLN EncargadoLN = ENCARGADOLN.Instancia;
+        private PELICULAxSUCURSALLN PeliculaxSucursalLN = PELICULAxSUCURSALLN.Instancia;
 
-        public frmENCARGADO()
+        public frmPELICULAxSUCURSAL()
         {
             InitializeComponent();
             CantidadDisponible();
+            LoadDataGridView();
         }
 
         private void CantidadDisponible()
         {
-            int cant = EncargadoLN.CantidadDisponible();
+            int cant = PeliculaxSucursalLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -41,25 +42,32 @@ namespace Cinema.Interfaz.REGISTRAR
         {
             try
             {
-                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Ingreso.Text)){throw new Exception("Faltan datos por llenar");}
-                ENCARGADO newEncargado = new ENCARGADO
+                //if (string.IsNullOrEmpty(Hotel.Text)){throw new Exception("Faltan datos por llenar");}
+                PELICULAxSUCURSAL newPeliculaxSucursal = new PELICULAxSUCURSAL
                 {
-                    EncargadoID = Convert.ToInt32(ID.Text),
-                    Identificacion = Cedula.Text,
-                    Nombre = Nombre.Text.ToUpper(),
-                    P_Apellido = P_Apellido.Text.ToUpper(),
-                    S_Apellido = S_Apellido.Text.ToUpper(),
-                    F_Nacimiento = F_Nacimiento.Value,
-                    F_Ingreso = F_Ingreso.Value
+                     = Convert.ToInt32(ID.Text),
+                    Titulo = Title.Text.ToUpper(),
+                    CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text),
+                    Lanzamiento = PeliculaLN.ValidarAño(Convert.ToInt32(Year.Text)),
+                    Idioma = PeliculaLN.ValidarIdioma(Language.Text)
                 };
-                EncargadoLN.AgregarEncargado(newEncargado);
+                newPeliculaxSucursal.AgregarPelicula(newPelicula);
                 CantidadDisponible();
-                ID.Clear(); Cedula.Clear(); Nombre.Clear(); P_Apellido.Clear(); S_Apellido.Clear(); //Se limpian los textbox's
-                MessageBox.Show("Exito al almacenar el Encargado!");
+                Cifras.Clear(); //Se limpian los textbox's
+                MessageBox.Show("Exito al almacenar la Película en la Sucursal!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No fue posible almacenar el Encargado: {ex.Message}");
+                MessageBox.Show($"No fue posible almacenar la Película en la Sucursal: {ex.Message}");
+            }
+        }
+
+        private void LoadDataGridView()
+        {
+            PELICULA[] peliculas = PeliculaxSucursalLN.ObtenerPeliculas();
+            foreach (var pelicula in peliculas)
+            {
+                PELICULADGV.Rows.Add(pelicula.PeliculaID, pelicula.Titulo, pelicula.CategoriaPelicula, pelicula.Lanzamiento, pelicula.Idioma);
             }
         }
 
@@ -72,13 +80,10 @@ namespace Cinema.Interfaz.REGISTRAR
             }
         }
 
-        //Bloquear el ingreso de carácteres númericos
-        private void Char_KeyPress(object sender, KeyPressEventArgs e)
+        //Bloquea el acceso de cualquier tecla
+        private void BLOCK_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            e.Handled = true;
         }
 
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla

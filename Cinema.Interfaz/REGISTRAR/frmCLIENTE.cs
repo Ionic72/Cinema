@@ -21,19 +21,22 @@ using Microsoft.VisualBasic;
 
 namespace Cinema.Interfaz.REGISTRAR
 {
-    public partial class frmENCARGADO : Form
+    public partial class frmCLIENTE : Form
     {
-        private readonly ENCARGADOLN EncargadoLN = ENCARGADOLN.Instancia;
+        private CLIENTELN ClienteLN = CLIENTELN.Instancia;
 
-        public frmENCARGADO()
+        public frmCLIENTE()
         {
             InitializeComponent();
             CantidadDisponible();
+            Activo.Items.Add("No");
+            Activo.Items.Add("Si");
+            Activo.SelectedIndex = 0;
         }
 
         private void CantidadDisponible()
         {
-            int cant = EncargadoLN.CantidadDisponible();
+            int cant = ClienteLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -41,25 +44,25 @@ namespace Cinema.Interfaz.REGISTRAR
         {
             try
             {
-                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Ingreso.Text)){throw new Exception("Faltan datos por llenar");}
-                ENCARGADO newEncargado = new ENCARGADO
-                {
-                    EncargadoID = Convert.ToInt32(ID.Text),
+                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Registro.Text)) { throw new Exception("Faltan datos por llenar"); }
+                CLIENTE newCliente = new CLIENTE {
+                    ClienteID = Convert.ToInt32(ID.Text),
                     Identificacion = Cedula.Text,
                     Nombre = Nombre.Text.ToUpper(),
                     P_Apellido = P_Apellido.Text.ToUpper(),
                     S_Apellido = S_Apellido.Text.ToUpper(),
                     F_Nacimiento = F_Nacimiento.Value,
-                    F_Ingreso = F_Ingreso.Value
+                    F_Registro = F_Registro.Value,
+                    Activo = Activo.SelectedIndex == 1,
                 };
-                EncargadoLN.AgregarEncargado(newEncargado);
+                ClienteLN.AgregarCliente(newCliente);
                 CantidadDisponible();
                 ID.Clear(); Cedula.Clear(); Nombre.Clear(); P_Apellido.Clear(); S_Apellido.Clear(); //Se limpian los textbox's
-                MessageBox.Show("Exito al almacenar el Encargado!");
+                MessageBox.Show("Exito al almacenar el Cliente!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No fue posible almacenar el Encargado: {ex.Message}");
+                MessageBox.Show($"No fue posible almacenar el Cliente: {ex.Message}");
             }
         }
 
@@ -79,6 +82,12 @@ namespace Cinema.Interfaz.REGISTRAR
             {
                 e.Handled = true;
             }
+        }
+
+        //Bloquea el acceso de cualquier tecla
+        private void BLOCK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla

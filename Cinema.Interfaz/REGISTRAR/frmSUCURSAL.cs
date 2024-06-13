@@ -24,8 +24,6 @@ namespace Cinema.Interfaz.REGISTRAR
     public partial class frmSUCURSAL : Form
     {
         private SUCURSALLN SucursalLN = SUCURSALLN.Instancia;
-        private SUCURSAL newSucursal = new SUCURSAL();
-        private int cant;
 
         public frmSUCURSAL()
         {
@@ -38,7 +36,7 @@ namespace Cinema.Interfaz.REGISTRAR
 
         private void CantidadDisponible()
         {
-            cant = SucursalLN.CantidadDisponible();
+            int cant = SucursalLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -47,14 +45,16 @@ namespace Cinema.Interfaz.REGISTRAR
             try
             {
                 if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(Encargado.Text) || string.IsNullOrEmpty(Direccion.Text) || string.IsNullOrEmpty(Telefono.Text)) { throw new Exception("Faltan datos por llenar"); }
-                newSucursal.SucursalID = Convert.ToInt32(ID.Text);
-                newSucursal.Nombre = Nombre.Text.ToUpper();
-                newSucursal.Encargado = SucursalLN.ObtenerEncargado(Convert.ToInt32(Encargado.Text));
-                newSucursal.Direccion = Direccion.Text.ToLower();
-                newSucursal.Telefono = Telefono.Text;
-                newSucursal.Activo = Activo.SelectedIndex == 1; //Si el index no es un Si (Index 1), almacenara false
+                SUCURSAL newSucursal = new SUCURSAL {
+                    SucursalID = Convert.ToInt32(ID.Text),
+                    Nombre = Nombre.Text.ToUpper(),
+                    Encargado = SucursalLN.ObtenerEncargado(Convert.ToInt32(Encargado.Text)),
+                    Direccion = Direccion.Text.ToLower(),
+                    Telefono = Telefono.Text,
+                    Activo = Activo.SelectedIndex == 1 //Si el index no es un Si (Index 1), almacenara false
+                };
                 SucursalLN.AgregarSucursal(newSucursal);
-                cant--; Cantidad.Text = $"Almacenamiento disponible: {cant}";
+                CantidadDisponible();
                 ID.Clear(); Nombre.Clear(); Encargado.Clear(); Direccion.Clear(); Telefono.Clear(); //Se limpian los textbox's
                 MessageBox.Show("Exito al almacenar la Sucursal!");
             }

@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 using Cinema.Entidades;
 using Newtonsoft.Json.Linq;
 
+/*
+ * UNED II Cuatrimestre
+ * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
+ * Estudiante: Andrew Jeshua Telles Calderón
+ * Fecha 16/6/2024
+ */
+
 namespace Cinema.Negocios
 {
     public class PELICULALN
@@ -22,10 +29,7 @@ namespace Cinema.Negocios
         {
             get
             {
-                if(instancia == null)
-                {
-                    instancia = new PELICULALN();
-                }
+                if(instancia == null) {instancia = new PELICULALN();}
                 return instancia;
             }
         }
@@ -33,22 +37,18 @@ namespace Cinema.Negocios
         public void AgregarPelicula(PELICULA newPelicula)
         {
             Verificar_Array(newPelicula);
-            for(int i = 0; i < CapacidadMaxima; i++)
+            for(int i=0; i<CapacidadMaxima; i++)
             {
-                if (Pelicula[i] == null)
-                {
-                    Pelicula[i] = newPelicula;
-                    return;
-                }
+                if (Pelicula[i] == null) {Pelicula[i] = newPelicula; return;}
             }
             throw new Exception("Capacidad máxima almacenada (20 Películas)"); //Si no hay más espacios vacíos, se ejecutará un error.
         }
 
         private void Verificar_Array(PELICULA newPelicula)
         {
-            foreach (var pelicula in Pelicula)
+            foreach(var pelicula in Pelicula)
             {
-                if(pelicula == null) { return; }
+                if(pelicula == null) {return;}
                 if(pelicula.PeliculaID == newPelicula.PeliculaID)
                 {
                     throw new Exception("El ID de la película ya se encuentra almacenada");
@@ -58,10 +58,7 @@ namespace Cinema.Negocios
 
         public int ValidarAño(int year)
         {
-            if(year < 1980 || year > 2028)
-            {
-                throw new Exception("El año no es válido, solo se permite entre (1980-2028");
-            }
+            if(year < 1980 || year > 2028) {throw new Exception("El año no es válido, solo se permite entre (1980-2028");}
             return year;
         }
 
@@ -71,34 +68,30 @@ namespace Cinema.Negocios
             string IdiomasText = File.ReadAllText(rutaArchivo);
             var json = JObject.Parse(IdiomasText);
 
-            if (json["Idiomas"][idioma] == null) { throw new Exception("El idioma ingresado no es válido o es incoherente."); }
-            return (string)json["Idiomas"][idioma];
+            if(json["Idiomas"][idioma] == null) {throw new Exception("El idioma ingresado no es válido o es incoherente.");}
+            var acronym = json["Idiomas"][idioma];
+            return acronym.ToString();
         }
 
         public CATEGORIA_PELICULA ObtenerCategoria(string NombreCategoría)
         {
-            CategoriaPelicula = categoria.ObtenerCategorias();
+            CategoriaPelicula = categoria.Categorias();
             foreach(var categorias in CategoriaPelicula)
             {
-                if (categorias.NombreCategoria == NombreCategoría)
-                {
-                    return categorias;
-                }
+                if(categorias.NombreCategoria == NombreCategoría) {return categorias;}
             }
             throw new Exception("La categoría ingresada no esta agregada!");
         }
 
+        public PELICULA[] Peliculas()
+        {
+            if(Pelicula.All(p => p == null)) { throw new Exception("No hay peliculas disponibles"); }
+            return Pelicula.Where(p => p != null).ToArray();
+        }
+        
         public int CantidadDisponible()
         {
-            int cant = 0;
-            for (int i = 0; i < CapacidadMaxima; i++)
-            {
-                if (Pelicula[i] == null)
-                {
-                    cant++;
-                }
-            }
-            return cant;
+            return Pelicula.Count(p => p == null);
         }
     }
 }

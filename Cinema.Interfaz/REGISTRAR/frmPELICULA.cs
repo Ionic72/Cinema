@@ -24,8 +24,6 @@ namespace Cinema.Interfaz.REGISTRAR
     public partial class frmPELICULA : Form
     {
         private PELICULALN PeliculaLN = PELICULALN.Instancia;
-        private PELICULA newPelicula = new PELICULA();
-        private int cant;
 
         public frmPELICULA()
         {
@@ -35,7 +33,7 @@ namespace Cinema.Interfaz.REGISTRAR
 
         private void CantidadDisponible()
         {
-            cant = PeliculaLN.CantidadDisponible();
+            int cant = PeliculaLN.CantidadDisponible();
             Cantidad.Text = $"Almacenamiento disponible: {cant}";
         }
 
@@ -44,13 +42,16 @@ namespace Cinema.Interfaz.REGISTRAR
             try
             {
                 if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Title.Text) || string.IsNullOrEmpty(Category.Text) || string.IsNullOrEmpty(Year.Text) || string.IsNullOrEmpty(Language.Text)){throw new Exception("Faltan datos por llenar");}
-                newPelicula.PeliculaID = Convert.ToInt32(ID.Text);
-                newPelicula.Titulo = Title.Text.ToUpper();
-                newPelicula.CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text);
-                newPelicula.Lanzamiento = PeliculaLN.ValidarAño(Convert.ToInt32(Year.Text));
-                newPelicula.Idioma = PeliculaLN.ValidarIdioma(Language.Text);
+                PELICULA newPelicula = new PELICULA
+                {
+                    PeliculaID = Convert.ToInt32(ID.Text),
+                    Titulo = Title.Text.ToUpper(),
+                    CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text),
+                    Lanzamiento = PeliculaLN.ValidarAño(Convert.ToInt32(Year.Text)),
+                    Idioma = PeliculaLN.ValidarIdioma(Language.Text)
+                };
                 PeliculaLN.AgregarPelicula(newPelicula);
-                cant--;  Cantidad.Text = $"Almacenamiento disponible: {cant}";
+                CantidadDisponible();
                 ID.Clear(); Title.Clear(); Category.Clear(); Year.Clear(); Language.Clear(); //Se limpian los textbox's
                 MessageBox.Show("Exito al almacenar la Película!");
             }

@@ -19,7 +19,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="REGISTRAR\frmCLIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="REGISTRAR\frmENCARGADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="REGISTRAR\frmPELICULAxSUCURSAL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="REGISTRAR\frmSUCURSAL.cs">

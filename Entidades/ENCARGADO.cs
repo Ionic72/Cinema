@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  * Fecha 16/6/2024
  */
 
-namespace Entidades
+namespace Cinema.Entidades
 {
     public class ENCARGADO
     {

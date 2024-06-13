@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Cinema.Entidades
 {
-    public class PELICULA_SUCURSAL
+    public class PELICULAxSUCURSAL
     {
         public SUCURSAL Sucursal { get; set; }
         public PELICULA Pelicula { get; set; }
