@@ -24,11 +24,15 @@ namespace Cinema.Interfaz.REGISTRAR
     public partial class frmPELICULAxSUCURSAL : Form
     {
         private PELICULAxSUCURSALLN PeliculaxSucursalLN = PELICULAxSUCURSALLN.Instancia;
+        private PELICULA[] peliculas = new PELICULA[20];
+        private SUCURSAL[] sucursales = new SUCURSAL[5];
+        private PELICULA[] selectedmovies = new PELICULA[20];
 
         public frmPELICULAxSUCURSAL()
         {
             InitializeComponent();
             CantidadDisponible();
+            LoadComboBox();
             LoadDataGridView();
         }
 
@@ -42,19 +46,21 @@ namespace Cinema.Interfaz.REGISTRAR
         {
             try
             {
-                //if (string.IsNullOrEmpty(Hotel.Text)){throw new Exception("Faltan datos por llenar");}
-                PELICULAxSUCURSAL newPeliculaxSucursal = new PELICULAxSUCURSAL
+                if (SucursalCBox.SelectedIndex == -1 || string.IsNullOrEmpty(Cifras.Text) || selectedmovies.All(p => p == null)) {throw new Exception("Faltan datos por llenar");}
+                foreach (PELICULA pelicula in selectedmovies)
                 {
-                     = Convert.ToInt32(ID.Text),
-                    Titulo = Title.Text.ToUpper(),
-                    CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text),
-                    Lanzamiento = PeliculaLN.ValidarAño(Convert.ToInt32(Year.Text)),
-                    Idioma = PeliculaLN.ValidarIdioma(Language.Text)
-                };
-                newPeliculaxSucursal.AgregarPelicula(newPelicula);
+                    if (pelicula == null) { break; }
+                    PELICULAxSUCURSAL newPeliculaxSucursal = new PELICULAxSUCURSAL
+                    {
+                        Sucursal = (SUCURSAL) SucursalCBox.SelectedItem,
+                        Pelicula = pelicula,
+                        Cantidad = Convert.ToInt32(Cifras.Text)
+                    };
+                    PeliculaxSucursalLN.AgregarPeliculaxSucursal(newPeliculaxSucursal);
+                }
                 CantidadDisponible();
-                Cifras.Clear(); //Se limpian los textbox's
-                MessageBox.Show("Exito al almacenar la Película en la Sucursal!");
+                Recarga(); //Se limpia todo
+                MessageBox.Show("Exito al almacenar la(s) Película(s) en la Sucursal!");
             }
             catch (Exception ex)
             {
@@ -62,12 +68,56 @@ namespace Cinema.Interfaz.REGISTRAR
             }
         }
 
+        private void LoadComboBox()
+        {
+            try
+            {
+                sucursales = PeliculaxSucursalLN.ObtenerSucursales();
+                SucursalCBox.DisplayMember = "Nombre";
+                SucursalCBox.ValueMember = "SucursalID";
+
+                foreach (SUCURSAL sucursal in sucursales)
+                {
+                    if (sucursal.Activo)
+                    {
+                        SucursalCBox.Items.Add(sucursal);
+                    }
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
         private void LoadDataGridView()
         {
-            PELICULA[] peliculas = PeliculaxSucursalLN.ObtenerPeliculas();
-            foreach (var pelicula in peliculas)
+            try
             {
-                PELICULADGV.Rows.Add(pelicula.PeliculaID, pelicula.Titulo, pelicula.CategoriaPelicula, pelicula.Lanzamiento, pelicula.Idioma);
+                peliculas = PeliculaxSucursalLN.ObtenerPeliculas();
+                foreach (var pelicula in peliculas)
+                {
+                    PELICULADGV.Rows.Add(pelicula.PeliculaID, pelicula.Titulo, pelicula.CategoriaPelicula.NombreCategoria, pelicula.Lanzamiento, pelicula.Idioma);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void PELICULADGV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0 && e.RowIndex < PELICULADGV.Rows.Count)
+            {
+                int IDPeliculaSeleccionada = Convert.ToInt32(PELICULADGV.Rows[e.RowIndex].Cells["ID"].Value);
+
+                if (selectedmovies.Any(p => p != null && p.PeliculaID == IDPeliculaSeleccionada)) {return;}
+                
+                PELICULA data = peliculas.FirstOrDefault(p => p.PeliculaID == IDPeliculaSeleccionada);
+
+                for(int i=0; i<20; i++)
+                {
+                    if (selectedmovies[i] == null) {selectedmovies[i] = data; PELICULADGV.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkGoldenrod; return;}
+                }
             }
         }
 
@@ -80,10 +130,12 @@ namespace Cinema.Interfaz.REGISTRAR
             }
         }
 
-        //Bloquea el acceso de cualquier tecla
-        private void BLOCK_KeyPress(object sender, KeyPressEventArgs e)
+        private void Recarga()
         {
-            e.Handled = true;
+            SucursalCBox.SelectedIndex = 0;
+            selectedmovies = new PELICULA[20]; //Creo un nuevo array vacío
+            Cifras.Text = null;
+            foreach(DataGridViewRow row in PELICULADGV.Rows) { row.DefaultCellStyle.BackColor = Color.FromArgb(27, 30, 35); }
         }
 
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla

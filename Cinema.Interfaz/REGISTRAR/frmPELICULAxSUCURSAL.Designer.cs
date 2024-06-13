@@ -43,7 +43,7 @@
             LANZAMIENTO = new DataGridViewTextBoxColumn();
             IDIOMA = new DataGridViewTextBoxColumn();
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            SucursalCBox = new ComboBox();
             panel3 = new Panel();
             Label_Titulo = new Label();
             Cantidad = new Label();
@@ -91,7 +91,7 @@
             panel2.Controls.Add(Cifras);
             panel2.Controls.Add(PELICULADGV);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(SucursalCBox);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
@@ -116,6 +116,7 @@
             // 
             // Cifras
             // 
+            Cifras.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             Cifras.Cursor = Cursors.IBeam;
             Cifras.Location = new Point(29, 97);
             Cifras.Name = "Cifras";
@@ -175,6 +176,7 @@
             PELICULADGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             PELICULADGV.Size = new Size(1039, 244);
             PELICULADGV.TabIndex = 19;
+            PELICULADGV.CellDoubleClick += PELICULADGV_CellDoubleClick;
             // 
             // ID
             // 
@@ -228,15 +230,15 @@
             label1.TabIndex = 18;
             label1.Text = "SUCURSAL";
             // 
-            // comboBox1
+            // SucursalCBox
             // 
-            comboBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(29, 36);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(1039, 23);
-            comboBox1.TabIndex = 0;
-            comboBox1.KeyPress += BLOCK_KeyPress;
+            SucursalCBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            SucursalCBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            SucursalCBox.FormattingEnabled = true;
+            SucursalCBox.Location = new Point(29, 36);
+            SucursalCBox.Name = "SucursalCBox";
+            SucursalCBox.Size = new Size(1039, 23);
+            SucursalCBox.TabIndex = 0;
             // 
             // panel3
             // 
@@ -316,7 +318,7 @@
         private Label Label_Titulo;
         private Label Cantidad;
         private Panel Titulo;
-        private ComboBox comboBox1;
+        private ComboBox SucursalCBox;
         private Label label1;
         private Label label2;
         private TextBox Cifras;

@@ -43,11 +43,17 @@ namespace Cinema.Negocios
 
         private void Verificar_Array(SUCURSAL newSucursal)
         {
-            for(int i = 0; i<CapacidadMaxima; i++)
+            for (int i = 0; i < CapacidadMaxima; i++)
             {
-                if(Sucursal[i] == null) {return;}
-                if(Sucursal[i].SucursalID == newSucursal.SucursalID) {throw new Exception("El ID de la Sucursal ya se encuentra almacenada");}
+                if (Sucursal[i] == null) { return; }
+                if (Sucursal[i].SucursalID == newSucursal.SucursalID || Sucursal[i].Encargado.Identificacion == newSucursal.Encargado.Identificacion || Sucursal[i].Telefono == newSucursal.Telefono) {throw new Exception("El \"ID\", el \"Encargado\" o el \"Teléfono\" de la Sucursal ya se encuentran registrados.");}
             }
+        }
+
+        public SUCURSAL[] Sucursales()
+        {
+            if(Sucursal.All(s => s == null)) {throw new Exception("No hay sucursales disponibles");}
+            return Sucursal.Where(s => s != null).ToArray();
         }
 
         public ENCARGADO ObtenerEncargado(int ID)

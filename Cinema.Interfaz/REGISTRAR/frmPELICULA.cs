@@ -46,9 +46,9 @@ namespace Cinema.Interfaz.REGISTRAR
                 {
                     PeliculaID = Convert.ToInt32(ID.Text),
                     Titulo = Title.Text.ToUpper(),
-                    CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text),
+                    CategoriaPelicula = PeliculaLN.ObtenerCategoria(Category.Text.ToUpper()),
                     Lanzamiento = PeliculaLN.ValidarAño(Convert.ToInt32(Year.Text)),
-                    Idioma = PeliculaLN.ValidarIdioma(Language.Text)
+                    Idioma = PeliculaLN.ValidarIdioma(Language.Text.ToLower())
                 };
                 PeliculaLN.AgregarPelicula(newPelicula);
                 CantidadDisponible();
