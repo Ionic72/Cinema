@@ -151,12 +151,12 @@
             // Activo
             // 
             Activo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Activo.DropDownStyle = ComboBoxStyle.DropDownList;
             Activo.FormattingEnabled = true;
             Activo.Location = new Point(153, 37);
             Activo.Name = "Activo";
             Activo.Size = new Size(751, 23);
             Activo.TabIndex = 0;
-            Activo.KeyPress += BLOCK_KeyPress;
             // 
             // panel11
             // 

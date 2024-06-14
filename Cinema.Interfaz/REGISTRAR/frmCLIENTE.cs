@@ -84,12 +84,6 @@ namespace Cinema.Interfaz.REGISTRAR
             }
         }
 
-        //Bloquea el acceso de cualquier tecla
-        private void BLOCK_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla
         private void Form_SizeChanged(object sender, EventArgs e)
         {

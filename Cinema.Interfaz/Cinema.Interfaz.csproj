@@ -14,6 +14,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CONSULTAR\frmCLIENTE_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CONSULTAR\frmPELICULAxSUCURSAL_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CONSULTAR\frmSUCURSAL_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CONSULTAR\frmENCARGADO_C.cs" />
+    <Compile Update="CONSULTAR\frmPELICULA_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CONSULTAR\frmCATEGORIA_PELICULA_C.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

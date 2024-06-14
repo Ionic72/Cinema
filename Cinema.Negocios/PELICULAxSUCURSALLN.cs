@@ -56,6 +56,12 @@ namespace Cinema.Negocios
             }
         }
         
+        public PELICULAxSUCURSAL[] PeliculasxSucursal()
+        {
+            if (PeliculaxSucursal.All(s => s == null)) { throw new Exception("No hay películas asociadas a alguna sucursal"); }
+            return PeliculaxSucursal.Where(s => s != null).ToArray();
+        }
+
         public SUCURSAL[] ObtenerSucursales()
         {
             SUCURSAL[] sucursales = Sucursal.Sucursales();

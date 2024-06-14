@@ -1,4 +1,5 @@
 using Cinema.Interfaz.REGISTRAR;
+using Cinema.Interfaz.CONSULTAR;
 using Microsoft.Win32;
 using System;
 using System.Drawing;
@@ -74,7 +75,7 @@ namespace Cinema.Interfaz
         //Ventanas de Consulta
         private void Consultar_Categoria_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmCATEGORIA_PELICULA_C());
         }
 
         private void Consultar_Pelicula_Click(object sender, EventArgs e)

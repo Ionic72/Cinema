@@ -38,6 +38,9 @@
             Encargado = new TextBox();
             panel2 = new Panel();
             panel4 = new Panel();
+            panel7 = new Panel();
+            Activo = new ComboBox();
+            label4 = new Label();
             panel5 = new Panel();
             label7 = new Label();
             Telefono = new TextBox();
@@ -47,15 +50,12 @@
             Label_Titulo = new Label();
             Cantidad = new Label();
             Titulo = new Panel();
-            label4 = new Label();
-            Activo = new ComboBox();
-            panel7 = new Panel();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            panel7.SuspendLayout();
             panel5.SuspendLayout();
             panel3.SuspendLayout();
             Titulo.SuspendLayout();
-            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // Enviar
@@ -194,6 +194,40 @@
             panel4.Size = new Size(1039, 68);
             panel4.TabIndex = 27;
             // 
+            // panel7
+            // 
+            panel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panel7.Controls.Add(Activo);
+            panel7.Controls.Add(label4);
+            panel7.Location = new Point(520, 0);
+            panel7.Name = "panel7";
+            panel7.Padding = new Padding(25, 0, 0, 0);
+            panel7.Size = new Size(519, 68);
+            panel7.TabIndex = 2;
+            // 
+            // Activo
+            // 
+            Activo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Activo.DropDownStyle = ComboBoxStyle.DropDownList;
+            Activo.FormattingEnabled = true;
+            Activo.Location = new Point(28, 34);
+            Activo.Name = "Activo";
+            Activo.Size = new Size(491, 23);
+            Activo.TabIndex = 30;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(28, 12);
+            label4.Name = "label4";
+            label4.Padding = new Padding(4, 0, 0, 0);
+            label4.Size = new Size(73, 19);
+            label4.TabIndex = 29;
+            label4.Text = "ACTIVO";
+            // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
@@ -300,40 +334,6 @@
             Titulo.Size = new Size(1097, 64);
             Titulo.TabIndex = 6;
             // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(28, 12);
-            label4.Name = "label4";
-            label4.Padding = new Padding(4, 0, 0, 0);
-            label4.Size = new Size(73, 19);
-            label4.TabIndex = 29;
-            label4.Text = "ACTIVO";
-            // 
-            // Activo
-            // 
-            Activo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Activo.FormattingEnabled = true;
-            Activo.Location = new Point(28, 34);
-            Activo.Name = "Activo";
-            Activo.Size = new Size(491, 23);
-            Activo.TabIndex = 30;
-            Activo.KeyPress += BLOCK_KeyPress;
-            // 
-            // panel7
-            // 
-            panel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            panel7.Controls.Add(Activo);
-            panel7.Controls.Add(label4);
-            panel7.Location = new Point(520, 0);
-            panel7.Name = "panel7";
-            panel7.Padding = new Padding(25, 0, 0, 0);
-            panel7.Size = new Size(519, 68);
-            panel7.TabIndex = 2;
-            // 
             // frmSUCURSAL
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -352,13 +352,13 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel4.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel3.ResumeLayout(false);
             Titulo.ResumeLayout(false);
             Titulo.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
