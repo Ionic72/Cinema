@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-using Cinema.Entidades;
+﻿using Cinema.Entidades;
 
 /*
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays.
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Negocios
@@ -27,35 +21,24 @@ namespace Cinema.Negocios
         {
             get
             {
-                if(instancia == null) {instancia = new PELICULAxSUCURSALLN();}
+                if (instancia == null) { instancia = new PELICULAxSUCURSALLN(); }
                 return instancia;
             }
         }
 
         public void AgregarPeliculaxSucursal(PELICULAxSUCURSAL newPeliculaxSucursal)
         {
-            bool error = false;
-            Verificar_Array(newPeliculaxSucursal, ref error);
-            if (error) {return;} //Se devuelve al frm por lo que se ignora el caso donde la sucursal y la pelicula ya estabam registrados y continua con los siguiente
-            for (int i=0; i<CapacidadMaxima; i++)
-            {
-                if(PeliculaxSucursal[i] == null) {PeliculaxSucursal[i] = newPeliculaxSucursal; return;}
-            }
-            throw new Exception("Capacidad máxima almacenada (100 PeliculasxSucursal)"); //Si no hay más espacios vacíos, se ejecutará un error.
-        }
-
-        private void Verificar_Array(PELICULAxSUCURSAL newPeliculaxSucursal, ref bool error)
-        {
             for (int i = 0; i < CapacidadMaxima; i++)
             {
-                if(PeliculaxSucursal[i] == null) {return;}
-                if(PeliculaxSucursal[i].Sucursal == newPeliculaxSucursal.Sucursal && PeliculaxSucursal[i].Pelicula == newPeliculaxSucursal.Pelicula)
-                {
-                    error = true;
-                }
+                if (PeliculaxSucursal[i] == null) { PeliculaxSucursal[i] = newPeliculaxSucursal; return; }
             }
         }
         
+        public PELICULAxSUCURSAL[] ObtenerPeliculasxSucursal(string Sucursal)
+        {
+            return PeliculaxSucursal.Where(p => p != null && p.Sucursal.Nombre == Sucursal).ToArray();
+        }
+
         public PELICULAxSUCURSAL[] PeliculasxSucursal()
         {
             if (PeliculaxSucursal.All(s => s == null)) { throw new Exception("No hay películas asociadas a alguna sucursal"); }
@@ -65,7 +48,7 @@ namespace Cinema.Negocios
         public SUCURSAL[] ObtenerSucursales()
         {
             SUCURSAL[] sucursales = Sucursal.Sucursales();
-            if(sucursales.All(s => !s.Activo)) {throw new Exception("No se encontrarón Sucursales Activas");}
+            if (sucursales.All(s => !s.Activo)) { throw new Exception("No se encontrarón Sucursales Activas"); }
             return sucursales;
         }
 

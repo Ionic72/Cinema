@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             Titulo = new Panel();
             Label_Titulo = new Label();
@@ -84,7 +84,7 @@
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(50, 26, 50, 26);
+            panel2.Padding = new Padding(25);
             panel2.Size = new Size(1097, 450);
             panel2.TabIndex = 7;
             // 
@@ -99,28 +99,28 @@
             PELICULAxSUCURSALDGV.BackgroundColor = Color.FromArgb(27, 30, 35);
             PELICULAxSUCURSALDGV.BorderStyle = BorderStyle.None;
             PELICULAxSUCURSALDGV.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            PELICULAxSUCURSALDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            PELICULAxSUCURSALDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             PELICULAxSUCURSALDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             PELICULAxSUCURSALDGV.Columns.AddRange(new DataGridViewColumn[] { SUCURSAL, PELÍCULA, CANTIDAD });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(25, 40, 76);
-            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            PELICULAxSUCURSALDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(25, 40, 76);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            PELICULAxSUCURSALDGV.DefaultCellStyle = dataGridViewCellStyle2;
             PELICULAxSUCURSALDGV.EnableHeadersVisualStyles = false;
             PELICULAxSUCURSALDGV.GridColor = Color.Tomato;
             PELICULAxSUCURSALDGV.ImeMode = ImeMode.NoControl;
-            PELICULAxSUCURSALDGV.Location = new Point(53, 29);
+            PELICULAxSUCURSALDGV.Location = new Point(28, 28);
             PELICULAxSUCURSALDGV.MultiSelect = false;
             PELICULAxSUCURSALDGV.Name = "PELICULAxSUCURSALDGV";
             PELICULAxSUCURSALDGV.ReadOnly = true;
@@ -129,9 +129,9 @@
             PELICULAxSUCURSALDGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             PELICULAxSUCURSALDGV.RowTemplate.Height = 25;
             PELICULAxSUCURSALDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            PELICULAxSUCURSALDGV.ShowCellToolTips = false;
+            PELICULAxSUCURSALDGV.ShowCellErrors = false;
             PELICULAxSUCURSALDGV.ShowEditingIcon = false;
-            PELICULAxSUCURSALDGV.Size = new Size(991, 392);
+            PELICULAxSUCURSALDGV.Size = new Size(1041, 394);
             PELICULAxSUCURSALDGV.TabIndex = 0;
             // 
             // SUCURSAL

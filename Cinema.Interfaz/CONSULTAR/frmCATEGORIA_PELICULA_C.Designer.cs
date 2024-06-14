@@ -84,7 +84,7 @@
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(50, 26, 50, 26);
+            panel2.Padding = new Padding(25);
             panel2.Size = new Size(1097, 450);
             panel2.TabIndex = 7;
             // 
@@ -120,7 +120,7 @@
             CATEGORIA_PELICULADGV.EnableHeadersVisualStyles = false;
             CATEGORIA_PELICULADGV.GridColor = Color.Tomato;
             CATEGORIA_PELICULADGV.ImeMode = ImeMode.NoControl;
-            CATEGORIA_PELICULADGV.Location = new Point(53, 29);
+            CATEGORIA_PELICULADGV.Location = new Point(28, 28);
             CATEGORIA_PELICULADGV.MultiSelect = false;
             CATEGORIA_PELICULADGV.Name = "CATEGORIA_PELICULADGV";
             CATEGORIA_PELICULADGV.ReadOnly = true;
@@ -129,10 +129,12 @@
             CATEGORIA_PELICULADGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             CATEGORIA_PELICULADGV.RowTemplate.Height = 25;
             CATEGORIA_PELICULADGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            CATEGORIA_PELICULADGV.ShowCellToolTips = false;
+            CATEGORIA_PELICULADGV.ShowCellErrors = false;
             CATEGORIA_PELICULADGV.ShowEditingIcon = false;
-            CATEGORIA_PELICULADGV.Size = new Size(991, 392);
+            CATEGORIA_PELICULADGV.ShowRowErrors = false;
+            CATEGORIA_PELICULADGV.Size = new Size(1041, 394);
             CATEGORIA_PELICULADGV.TabIndex = 0;
+            CATEGORIA_PELICULADGV.Tag = "";
             // 
             // ID
             // 

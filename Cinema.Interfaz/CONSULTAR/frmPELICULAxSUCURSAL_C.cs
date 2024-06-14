@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Cinema.Entidades;
+﻿using Cinema.Entidades;
 using Cinema.Negocios;
-using Microsoft.VisualBasic;
 
 /*
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Interfaz.CONSULTAR
@@ -37,7 +26,9 @@ namespace Cinema.Interfaz.CONSULTAR
             {
                 foreach (PELICULAxSUCURSAL PeliculaxSucursal in PeliculaxSucursalLN.PeliculasxSucursal())
                 {
-                    PELICULAxSUCURSALDGV.Rows.Add(PeliculaxSucursal.Sucursal, PeliculaxSucursal.Pelicula, PeliculaxSucursal.Cantidad);
+                    string sucursal = $"{PeliculaxSucursal.Sucursal.SucursalID}, {PeliculaxSucursal.Sucursal.Nombre}, {PeliculaxSucursal.Sucursal.Encargado.EncargadoID}, {PeliculaxSucursal.Sucursal.Direccion}, {PeliculaxSucursal.Sucursal.Telefono}";
+                    string pelicula = $"{PeliculaxSucursal.Pelicula.PeliculaID}, {PeliculaxSucursal.Pelicula.Titulo}, {PeliculaxSucursal.Pelicula.CategoriaPelicula.NombreCategoria}, {PeliculaxSucursal.Pelicula.Lanzamiento}, {PeliculaxSucursal.Pelicula.Idioma}";
+                    PELICULAxSUCURSALDGV.Rows.Add(sucursal, pelicula, PeliculaxSucursal.Cantidad);
                 }
             }
             catch (Exception ex)

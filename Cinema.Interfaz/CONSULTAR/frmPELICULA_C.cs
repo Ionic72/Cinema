@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Cinema.Entidades;
+﻿using Cinema.Entidades;
 using Cinema.Negocios;
-using Microsoft.VisualBasic;
 
 /*
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Interfaz.CONSULTAR
@@ -37,7 +26,8 @@ namespace Cinema.Interfaz.CONSULTAR
             {
                 foreach (PELICULA Pelicula in PeliculaLN.Peliculas())
                 {
-                    PELICULADGV.Rows.Add(Pelicula.PeliculaID, Pelicula.Titulo, Pelicula.CategoriaPelicula.NombreCategoria, Pelicula.Lanzamiento, Pelicula.Idioma);
+                    string categoria = ($"{Pelicula.CategoriaPelicula.CategoriaID}, {Pelicula.CategoriaPelicula.NombreCategoria}, {Pelicula.CategoriaPelicula.Descripcion}");
+                    PELICULADGV.Rows.Add(Pelicula.PeliculaID, Pelicula.Titulo, categoria, Pelicula.Lanzamiento, Pelicula.Idioma);
                 }
             }
             catch (Exception ex)

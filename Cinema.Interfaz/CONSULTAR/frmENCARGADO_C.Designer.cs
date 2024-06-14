@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             Titulo = new Panel();
             Label_Titulo = new Label();
@@ -76,9 +76,9 @@
             Label_Titulo.Font = new Font("Arial", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
             Label_Titulo.Location = new Point(170, 13);
             Label_Titulo.Name = "Label_Titulo";
-            Label_Titulo.Size = new Size(463, 43);
+            Label_Titulo.Size = new Size(524, 43);
             Label_Titulo.TabIndex = 0;
-            Label_Titulo.Text = "CONSULTAR PELICULAS";
+            Label_Titulo.Text = "CONSULTAR ENCARGADOS";
             // 
             // panel2
             // 
@@ -88,7 +88,7 @@
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(50, 26, 50, 26);
+            panel2.Padding = new Padding(25);
             panel2.Size = new Size(1097, 450);
             panel2.TabIndex = 7;
             // 
@@ -103,28 +103,28 @@
             PELICULADGV.BackgroundColor = Color.FromArgb(27, 30, 35);
             PELICULADGV.BorderStyle = BorderStyle.None;
             PELICULADGV.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            PELICULADGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            PELICULADGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             PELICULADGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             PELICULADGV.Columns.AddRange(new DataGridViewColumn[] { ID, IDENTIFICACIÓN, NOMBRE, P_APELLIDO, S_APELLIDO, NACIMIENTO, INGRESO });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(25, 40, 76);
-            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            PELICULADGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(25, 40, 76);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            PELICULADGV.DefaultCellStyle = dataGridViewCellStyle2;
             PELICULADGV.EnableHeadersVisualStyles = false;
             PELICULADGV.GridColor = Color.Tomato;
             PELICULADGV.ImeMode = ImeMode.NoControl;
-            PELICULADGV.Location = new Point(53, 29);
+            PELICULADGV.Location = new Point(28, 28);
             PELICULADGV.MultiSelect = false;
             PELICULADGV.Name = "PELICULADGV";
             PELICULADGV.ReadOnly = true;
@@ -133,9 +133,9 @@
             PELICULADGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             PELICULADGV.RowTemplate.Height = 25;
             PELICULADGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            PELICULADGV.ShowCellToolTips = false;
+            PELICULADGV.ShowCellErrors = false;
             PELICULADGV.ShowEditingIcon = false;
-            PELICULADGV.Size = new Size(991, 392);
+            PELICULADGV.Size = new Size(1041, 394);
             PELICULADGV.TabIndex = 0;
             // 
             // ID

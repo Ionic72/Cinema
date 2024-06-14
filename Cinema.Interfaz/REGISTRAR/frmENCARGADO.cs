@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Cinema.Entidades;
+﻿using Cinema.Entidades;
 using Cinema.Negocios;
-using Microsoft.VisualBasic;
 
 /*
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Interfaz.REGISTRAR
@@ -41,7 +30,7 @@ namespace Cinema.Interfaz.REGISTRAR
         {
             try
             {
-                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Ingreso.Text)){throw new Exception("Faltan datos por llenar");}
+                if (string.IsNullOrEmpty(ID.Text) || string.IsNullOrEmpty(Cedula.Text) || string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(P_Apellido.Text) || string.IsNullOrEmpty(S_Apellido.Text) || string.IsNullOrEmpty(F_Nacimiento.Text) || string.IsNullOrEmpty(F_Ingreso.Text)) { throw new Exception("Faltan datos por llenar"); }
                 ENCARGADO newEncargado = new ENCARGADO
                 {
                     EncargadoID = Convert.ToInt32(ID.Text),
@@ -66,19 +55,13 @@ namespace Cinema.Interfaz.REGISTRAR
         //Bloquar el ingreso de carácteres alphanúmericos
         private void NUM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
         }
 
         //Bloquear el ingreso de carácteres númericos
         private void Char_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar)) { e.Handled = true; }
         }
 
         //Situa el titulo y el boton dependiendo del tamaño de la pantalla

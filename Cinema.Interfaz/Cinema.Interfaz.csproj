@@ -41,9 +41,7 @@
     <Compile Update="REGISTRAR\frmENCARGADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="REGISTRAR\frmPELICULAxSUCURSAL.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="REGISTRAR\frmPELICULAxSUCURSAL.cs" />
     <Compile Update="REGISTRAR\frmSUCURSAL.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,7 +9,7 @@ using System.Windows.Forms;
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Interfaz
@@ -80,27 +80,27 @@ namespace Cinema.Interfaz
 
         private void Consultar_Pelicula_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmPELICULA_C());
         }
 
         private void Consultar_Encargado_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmENCARGADO_C());
         }
 
         private void Consultar_Sucusal_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmSUCURSAL_C());
         }
 
         private void Consultar_PeliculaxSucursal_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmPELICULAxSUCURSAL_C());
         }
 
         private void Consultar_Cliente_Click(object sender, EventArgs e)
         {
-
+            ShowForm(new frmCLIENTE_C());
         }
 
         //VENTANAS

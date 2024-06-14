@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             Titulo = new Panel();
             Label_Titulo = new Label();
@@ -75,9 +75,9 @@
             Label_Titulo.Font = new Font("Arial", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
             Label_Titulo.Location = new Point(170, 13);
             Label_Titulo.Name = "Label_Titulo";
-            Label_Titulo.Size = new Size(463, 43);
+            Label_Titulo.Size = new Size(510, 43);
             Label_Titulo.TabIndex = 0;
-            Label_Titulo.Text = "CONSULTAR PELICULAS";
+            Label_Titulo.Text = "CONSULTAR SUCURSALES";
             // 
             // panel2
             // 
@@ -87,7 +87,7 @@
             panel2.Location = new Point(0, 99);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(50, 26, 50, 26);
+            panel2.Padding = new Padding(25);
             panel2.Size = new Size(1097, 450);
             panel2.TabIndex = 7;
             // 
@@ -102,28 +102,28 @@
             SUCURSALDGV.BackgroundColor = Color.FromArgb(27, 30, 35);
             SUCURSALDGV.BorderStyle = BorderStyle.None;
             SUCURSALDGV.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            SUCURSALDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            SUCURSALDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             SUCURSALDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SUCURSALDGV.Columns.AddRange(new DataGridViewColumn[] { ID, NOMBRE, ENCARGADO, DIRECCIÓN, TELÉFONO, ACTIVO });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(25, 40, 76);
-            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            SUCURSALDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(25, 40, 76);
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            SUCURSALDGV.DefaultCellStyle = dataGridViewCellStyle2;
             SUCURSALDGV.EnableHeadersVisualStyles = false;
             SUCURSALDGV.GridColor = Color.Tomato;
             SUCURSALDGV.ImeMode = ImeMode.NoControl;
-            SUCURSALDGV.Location = new Point(53, 29);
+            SUCURSALDGV.Location = new Point(28, 28);
             SUCURSALDGV.MultiSelect = false;
             SUCURSALDGV.Name = "SUCURSALDGV";
             SUCURSALDGV.ReadOnly = true;
@@ -132,9 +132,9 @@
             SUCURSALDGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             SUCURSALDGV.RowTemplate.Height = 25;
             SUCURSALDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            SUCURSALDGV.ShowCellToolTips = false;
+            SUCURSALDGV.ShowCellErrors = false;
             SUCURSALDGV.ShowEditingIcon = false;
-            SUCURSALDGV.Size = new Size(991, 392);
+            SUCURSALDGV.Size = new Size(1041, 394);
             SUCURSALDGV.TabIndex = 0;
             // 
             // ID

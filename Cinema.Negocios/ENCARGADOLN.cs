@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cinema.Entidades;
+﻿using Cinema.Entidades;
 
 /*
  * UNED II Cuatrimestre
  * Proyecto 01: Proyecto que se encarga de registrar y mostrar información implementando Clases, Arrays. 
  * Estudiante: Andrew Jeshua Telles Calderón
- * Fecha 16/6/2024
+ * Fecha 14/6/2024
  */
 
 namespace Cinema.Negocios
@@ -24,7 +19,7 @@ namespace Cinema.Negocios
         {
             get
             {
-                if(instancia == null) {instancia = new ENCARGADOLN();}
+                if (instancia == null) { instancia = new ENCARGADOLN(); }
                 return instancia;
             }
         }
@@ -32,19 +27,19 @@ namespace Cinema.Negocios
         public void AgregarEncargado(ENCARGADO newEncargado)
         {
             Verificar_Array(newEncargado);
-            for(int i=0; i<CapacidadMaxima; i++)
+            for(int i = 0; i < CapacidadMaxima; i++)
             {
-                if(Encargado[i] == null) {Encargado[i] = newEncargado; return;}
+                if (Encargado[i] == null) { Encargado[i] = newEncargado; return; }
             }
             throw new Exception("Capacidad máxima almacenada (20 Encargados)"); //Si no hay más espacios vacíos, se ejecutará un error.
         }
 
         private void Verificar_Array(ENCARGADO newEncargado)
         {
-            foreach(var encargado in Encargado)
+            foreach (var encargado in Encargado)
             {
-                if(encargado == null) {return;}
-                if(encargado.EncargadoID == newEncargado.EncargadoID || encargado.Identificacion == newEncargado.Identificacion)
+                if (encargado == null) { return; }
+                if (encargado.EncargadoID == newEncargado.EncargadoID || encargado.Identificacion == newEncargado.Identificacion)
                 {
                     throw new Exception("El \"ID\" o la \"Cédula\" del encargado ya se encuentra almacenada");
                 }
@@ -53,7 +48,7 @@ namespace Cinema.Negocios
 
         public ENCARGADO[] Encargados()
         {
-            if(Encargado.All(c => c == null)) {throw new Exception("No hay encargados disponibles");}
+            if (Encargado.All(c => c == null)) { throw new Exception("No hay encargados disponibles"); }
             return Encargado.Where(c => c != null).ToArray();
         }
 

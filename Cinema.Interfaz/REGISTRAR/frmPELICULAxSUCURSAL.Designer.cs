@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Enviar = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
@@ -48,6 +48,7 @@
             Label_Titulo = new Label();
             Cantidad = new Label();
             Titulo = new Panel();
+            label3 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PELICULADGV).BeginInit();
             panel3.SuspendLayout();
@@ -87,6 +88,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(27, 30, 35);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(Cifras);
             panel2.Controls.Add(PELICULADGV);
@@ -136,40 +138,40 @@
             PELICULADGV.BorderStyle = BorderStyle.None;
             PELICULADGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             PELICULADGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Brown;
-            dataGridViewCellStyle1.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Brown;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            PELICULADGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.Brown;
+            dataGridViewCellStyle4.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Brown;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            PELICULADGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             PELICULADGV.ColumnHeadersHeight = 25;
             PELICULADGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             PELICULADGV.Columns.AddRange(new DataGridViewColumn[] { ID, TÍTULO, CATEGORÍA, LANZAMIENTO, IDIOMA });
             PELICULADGV.Cursor = Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(27, 30, 35);
-            dataGridViewCellStyle2.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGoldenrod;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            PELICULADGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(27, 30, 35);
+            dataGridViewCellStyle5.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionBackColor = Color.DarkGoldenrod;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            PELICULADGV.DefaultCellStyle = dataGridViewCellStyle5;
             PELICULADGV.EnableHeadersVisualStyles = false;
             PELICULADGV.GridColor = Color.Gainsboro;
             PELICULADGV.Location = new Point(29, 146);
             PELICULADGV.Name = "PELICULADGV";
             PELICULADGV.ReadOnly = true;
             PELICULADGV.RightToLeft = RightToLeft.No;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            PELICULADGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            PELICULADGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             PELICULADGV.RowHeadersVisible = false;
             PELICULADGV.RowTemplate.Height = 25;
             PELICULADGV.RowTemplate.ReadOnly = true;
@@ -239,6 +241,7 @@
             SucursalCBox.Name = "SucursalCBox";
             SucursalCBox.Size = new Size(1039, 23);
             SucursalCBox.TabIndex = 0;
+            SucursalCBox.SelectedIndexChanged += SucursalCBox_SelectedIndexChanged;
             // 
             // panel3
             // 
@@ -286,6 +289,19 @@
             Titulo.Size = new Size(1097, 64);
             Titulo.TabIndex = 6;
             // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlDark;
+            label3.Location = new Point(29, 124);
+            label3.Name = "label3";
+            label3.Padding = new Padding(4, 0, 0, 0);
+            label3.Size = new Size(293, 19);
+            label3.TabIndex = 22;
+            label3.Text = "DOBLE CLICK PARA SELECCIONAR";
+            // 
             // frmPELICULAxSUCURSAL
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -328,5 +344,6 @@
         private DataGridViewTextBoxColumn CATEGORÍA;
         private DataGridViewTextBoxColumn LANZAMIENTO;
         private DataGridViewTextBoxColumn IDIOMA;
+        private Label label3;
     }
 }
